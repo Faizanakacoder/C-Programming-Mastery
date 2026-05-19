@@ -1,8 +1,8 @@
 /*
 ========================================
-Program : Multiplication Using Arithmetic Operator
-File    : example3.c
-Topic   : Arithmetic Operators
+Program : Less Than Equal To Operator
+File    : example6.c
+Topic   : Relational Operators
 Author  : Faizanakacoder
 ========================================
 */
@@ -15,8 +15,8 @@ int main()
     int a = 5;
     int b = 10;
 
-    // Performing multiplication
-    printf("Product = %d", a * b);
+    // Checking less than or equal to condition
+    printf("%d", a <= b);
 
     // Returning successful execution
     return 0;
