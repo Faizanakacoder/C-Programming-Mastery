@@ -1,0 +1,30 @@
+/*
+========================================
+Program : Positive Negative Zero
+File    : example2.c
+Topic   : Else If Ladder
+Author  : Faizanakacoder
+========================================
+*/
+
+#include <stdio.h>
+
+int main()
+{
+    int number = 0;
+
+    if(number > 0)
+    {
+        printf("Positive Number");
+    }
+    else if(number < 0)
+    {
+        printf("Negative Number");
+    }
+    else
+    {
+        printf("Zero");
+    }
+
+    return 0;
+}
