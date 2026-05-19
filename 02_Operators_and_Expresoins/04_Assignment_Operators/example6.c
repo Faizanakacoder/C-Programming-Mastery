@@ -1,7 +1,7 @@
 /*
 ========================================
-Program : Divide and Assign Operator
-File    : example5.c
+Program : Modulus and Assign Operator
+File    : example6.c
 Topic   : Assignment Operators
 Author  : Faizanakacoder
 ========================================
@@ -11,9 +11,9 @@ Author  : Faizanakacoder
 
 int main()
 {
-    int number = 50;
+    int number = 17;
 
-    number /= 5;
+    number %= 5;
 
     printf("%d", number);
 

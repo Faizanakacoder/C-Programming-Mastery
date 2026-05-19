@@ -1,7 +1,7 @@
 /*
 ========================================
-Program : Basic Conditional Operator
-File    : example1.c
+Program : Pass or Fail
+File    : example6.c
 Topic   : Conditional Operator
 Author  : Faizanakacoder
 ========================================
@@ -11,11 +11,11 @@ Author  : Faizanakacoder
 
 int main()
 {
-    int number = 10;
+    int marks = 35;
 
-    number > 5
-    ? printf("Greater")
-    : printf("Smaller");
+    marks >= 40
+    ? printf("Pass")
+    : printf("Fail");
 
     return 0;
 }

@@ -1,8 +1,8 @@
 /*
 ========================================
-Program : Basic Conditional Operator
-File    : example1.c
-Topic   : Conditional Operator
+Program : Right Shift Operator
+File    : example6.c
+Topic   : Bitwise Operators
 Author  : Faizanakacoder
 ========================================
 */
@@ -13,9 +13,7 @@ int main()
 {
     int number = 10;
 
-    number > 5
-    ? printf("Greater")
-    : printf("Smaller");
+    printf("%d", number >> 1);
 
     return 0;
 }
