@@ -46,7 +46,7 @@ After studying recursion, you will learn:
 ## 📂 Folder Structure
 
 ```bash
-04_Recursion/
+05_Recursion/
 │
 ├── README.md
 ├── theory.md

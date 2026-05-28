@@ -50,7 +50,7 @@ After completing this module, you will understand:
 ## 📂 Folder Structure
 
 ```bash
-04_Functions_and_Modules/
+06_Modules/
 │
 ├── README.md
 ├── theory.md

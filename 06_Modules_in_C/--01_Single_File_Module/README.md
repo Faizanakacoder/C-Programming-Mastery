@@ -1,70 +1,42 @@
-# 🚀 Functions and Modules in C Programming
-
-## 📌 Introduction
-
-Functions and Modules are one of the most important concepts in C Programming. They help in breaking a large program into smaller, reusable, and manageable parts.
-
-A **function** is a block of code that performs a specific task, while a **module** is a collection of related functions organized in separate files.
-
-This topic is the foundation of **modular programming**, which is widely used in real-world software development.
+# 📘 Single File Module in C Programming
 
 ---
 
-## 🎯 Why This Topic is Important
+## 🚀 Introduction
 
-- Makes code reusable
-- Improves readability
-- Helps in debugging
-- Supports teamwork in large projects
-- Forms base of software engineering
-- Required in placements & interviews
+A Single File Module is the simplest form of C programming where the entire program is written inside one `.c` file. It contains all logic, variables, and functions in a single file without splitting into multiple modules.
+
+This is the foundation step before learning modular (multi-file) programming.
 
 ---
 
-## 🌍 Real Life Usage
+## 🎯 Why Single File Module is Important
 
-- Operating systems (Windows, Linux)
-- Banking software systems
-- Game development engines
-- Mobile applications
-- Embedded systems (IoT devices)
-- Large enterprise applications
-
----
-
-## 📚 Learning Outcomes
-
-After completing this module, you will understand:
-
-- How functions work in C
-- How to create user-defined functions
-- How to use library functions
-- Types of functions in C
-- How recursion works
-- How modular programming is implemented
-- How to split programs into multiple files
-- How header files work
+- Helps beginners understand program flow
+- Builds logic development skills
+- No complexity of multiple files
+- Used in basic programs and exams
+- Foundation for modular programming
 
 ---
 
 ## 📂 Folder Structure
 
 ```bash
-04_Functions_and_Modules/
+01_Single_File_Module/
 │
 ├── README.md
 ├── theory.md
 ├── syntax.md
 │
-├── 01_Library_Functions/
-├── 02_User_Defined_Functions/
-├── 03_Types_of_Functions/
-│   ├── 01_No_Argument_No_Return/
-│   ├── 02_Argument_No_Return/
-│   ├── 03_No_Argument_Return/
-│   └── 04_Argument_Return/
-│
-├── 04_Recursion/
-├── 05_Storage_Classes/
-├── 06_Multi_File_Modules/
-└── 07_Function_Pointers/
+└── programs/
+    ├── program1_hello_world.c
+    ├── program2_add_two_numbers.c
+    ├── program3_user_input.c
+    ├── program4_even_odd.c
+    ├── program5_largest_number.c
+    ├── program6_1_to_10.c
+    ├── program7_multiplication_table.c
+    ├── program8_sum_of_digits.c
+    ├── program9_reverse_number.c
+    └── program10_prime_number.c
