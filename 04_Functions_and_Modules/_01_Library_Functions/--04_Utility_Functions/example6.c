@@ -1,31 +1,29 @@
-# 📄 05_string_input_output.c
+# 📄 06_exit_function.c
 
 /*
 ===========================================
 Question:
-Write a C program to input
-and display a string.
+Write a C program to terminate
+program using exit().
 ===========================================
 */
 
 #include<stdio.h>
+#include<stdlib.h>
 
 void main()
 {
-    char str[100];
+    printf("Program Started\n");
 
-    printf("Enter String: ");
+    exit(0);
 
-    gets(str);
-
-    printf("String = %s", str);
+    printf("This Line Will Not Execute");
 }
 
 /*
 --------------- OUTPUT ----------------
 
-Enter String: Faizan
-String = Faizan
+Program Started
 
 ---------------------------------------
 */

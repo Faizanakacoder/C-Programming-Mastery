@@ -1,3 +1,5 @@
+# 📄 01_printf.c
+
 /*
 ===========================================
 Question:
@@ -6,10 +8,10 @@ Hello World using printf().
 ===========================================
 */
 
-#include <stdio.h>
+#include<stdio.h>
 
-int main(void)
+void main()
 {
     printf("Hello World");
-    return 0;
 }
+```

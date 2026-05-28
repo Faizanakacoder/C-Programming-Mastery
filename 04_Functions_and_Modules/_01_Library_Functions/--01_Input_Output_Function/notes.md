@@ -83,7 +83,7 @@ string.h
 ✅ Reduce repeated coding  
 ✅ Used in almost every C program  
 
---
+---
 
 # 📌 One Line Definitions
 

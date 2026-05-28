@@ -1,32 +1,30 @@
-# 📄 05_string_input_output.c
-
 /*
 ===========================================
 Question:
-Write a C program to input
-and display a string.
+Write a C program to print
+Hello World using No Argument
+No Return function.
 ===========================================
 */
 
 #include<stdio.h>
 
+void hello();
+
 void main()
 {
-    char str[100];
+    hello();
+}
 
-    printf("Enter String: ");
-
-    gets(str);
-
-    printf("String = %s", str);
+void hello()
+{
+    printf("Hello World");
 }
 
 /*
 --------------- OUTPUT ----------------
 
-Enter String: Faizan
-String = Faizan
+Hello World
 
 ---------------------------------------
 */
-```

@@ -1,31 +1,31 @@
-# 📄 05_string_input_output.c
+# 📄 03_malloc_function.c
 
 /*
 ===========================================
 Question:
-Write a C program to input
-and display a string.
+Write a C program to allocate
+memory using malloc().
 ===========================================
 */
 
 #include<stdio.h>
+#include<stdlib.h>
 
 void main()
 {
-    char str[100];
+    int *ptr;
 
-    printf("Enter String: ");
+    ptr = (int*)malloc(sizeof(int));
 
-    gets(str);
+    *ptr = 50;
 
-    printf("String = %s", str);
+    printf("Value = %d", *ptr);
 }
 
 /*
 --------------- OUTPUT ----------------
 
-Enter String: Faizan
-String = Faizan
+Value = 50
 
 ---------------------------------------
 */

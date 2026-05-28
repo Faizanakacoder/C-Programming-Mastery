@@ -1,31 +1,27 @@
-# 📄 05_string_input_output.c
+# 📄 02_srand_function.c
 
 /*
 ===========================================
 Question:
-Write a C program to input
-and display a string.
+Write a C program to generate
+random numbers using srand().
 ===========================================
 */
 
 #include<stdio.h>
+#include<stdlib.h>
 
 void main()
 {
-    char str[100];
+    srand(5);
 
-    printf("Enter String: ");
-
-    gets(str);
-
-    printf("String = %s", str);
+    printf("Random Number = %d", rand());
 }
 
 /*
 --------------- OUTPUT ----------------
 
-Enter String: Faizan
-String = Faizan
+Random Number = 590011675
 
 ---------------------------------------
 */

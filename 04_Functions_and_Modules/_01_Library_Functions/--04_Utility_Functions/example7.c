@@ -1,31 +1,31 @@
-# 📄 05_string_input_output.c
+# 📄 07_atoi_function.c
 
 /*
 ===========================================
 Question:
-Write a C program to input
-and display a string.
+Write a C program to convert
+string into integer using atoi().
 ===========================================
 */
 
 #include<stdio.h>
+#include<stdlib.h>
 
 void main()
 {
-    char str[100];
+    char str[] = "123";
 
-    printf("Enter String: ");
+    int n;
 
-    gets(str);
+    n = atoi(str);
 
-    printf("String = %s", str);
+    printf("Integer = %d", n);
 }
 
 /*
 --------------- OUTPUT ----------------
 
-Enter String: Faizan
-String = Faizan
+Integer = 123
 
 ---------------------------------------
 */

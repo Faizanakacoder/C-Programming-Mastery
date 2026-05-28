@@ -1,6 +1,5 @@
 # 📄 10_lowercase_conversion.c
 
-```c id="l7v7b0"
 /*
 ===========================================
 Question:
@@ -35,5 +34,3 @@ Enter String: HELLO
 Lowercase String = hello
 
 ---------------------------------------
-*/
-```

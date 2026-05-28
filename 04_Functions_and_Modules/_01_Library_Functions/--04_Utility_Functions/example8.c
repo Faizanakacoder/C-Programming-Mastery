@@ -1,31 +1,31 @@
-# 📄 05_string_input_output.c
+# 📄 08_atof_function.c
 
 /*
 ===========================================
 Question:
-Write a C program to input
-and display a string.
+Write a C program to convert
+string into float using atof().
 ===========================================
 */
 
 #include<stdio.h>
+#include<stdlib.h>
 
 void main()
 {
-    char str[100];
+    char str[] = "12.5";
 
-    printf("Enter String: ");
+    float n;
 
-    gets(str);
+    n = atof(str);
 
-    printf("String = %s", str);
+    printf("Float Value = %.2f", n);
 }
 
 /*
 --------------- OUTPUT ----------------
 
-Enter String: Faizan
-String = Faizan
+Float Value = 12.50
 
 ---------------------------------------
 */
