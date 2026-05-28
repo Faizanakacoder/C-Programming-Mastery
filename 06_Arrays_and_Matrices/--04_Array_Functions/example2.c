@@ -1,24 +1,33 @@
 /*
 ===========================================
-Q2. Reverse printing using head recursion.
+Question 02:
+Write a C program to find sum using function.
 ===========================================
 */
 
 #include<stdio.h>
 
-void print(int n)
+int sum(int arr[], int size)
 {
-    if(n == 0)
-        return;
+    int i, s = 0;
 
-    print(n - 1);
+    for(i = 0; i < size; i++)
+        s += arr[i];
 
-    printf("%d ", n);
+    return s;
 }
 
-int main()
+void main()
 {
-    print(10);
+    int arr[5], i;
 
-    return 0;
+    for(i = 0; i < 5; i++)
+        scanf("%d", &arr[i]);
+
+    printf("Sum = %d", sum(arr, 5));
 }
+
+/*
+OUTPUT:
+Sum = 15
+*/

@@ -1,24 +1,37 @@
 /*
 ===========================================
-Q1. Print numbers using head recursion.
+Question 01:
+Write a C program to display array using function.
 ===========================================
 */
 
 #include<stdio.h>
 
-void print(int n)
+void display(int arr[], int size)
 {
-    if(n == 0)
-        return;
+    int i;
 
-    print(n - 1);
-
-    printf("%d ", n);
+    for(i = 0; i < size; i++)
+    {
+        printf("%d ", arr[i]);
+    }
 }
 
-int main()
+void main()
 {
-    print(5);
+    int arr[5], i;
 
-    return 0;
+    printf("Enter 5 elements:\n");
+
+    for(i = 0; i < 5; i++)
+        scanf("%d", &arr[i]);
+
+    display(arr, 5);
 }
+
+/*
+OUTPUT:
+Enter 5 elements:
+1 2 3 4 5
+1 2 3 4 5
+*/

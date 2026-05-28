@@ -1,24 +1,29 @@
 /*
 ===========================================
-Q2. Reverse printing using head recursion.
+Question 02:
+Write a C program to find sum using pointer.
 ===========================================
 */
 
 #include<stdio.h>
 
-void print(int n)
+void main()
 {
-    if(n == 0)
-        return;
+    int arr[5], i, sum = 0;
+    int *p = arr;
 
-    print(n - 1);
+    printf("Enter 5 elements:\n");
 
-    printf("%d ", n);
+    for(i = 0; i < 5; i++)
+        scanf("%d", p + i);
+
+    for(i = 0; i < 5; i++)
+        sum += *(p + i);
+
+    printf("Sum = %d", sum);
 }
 
-int main()
-{
-    print(10);
-
-    return 0;
-}
+/*
+OUTPUT:
+Sum = 15
+*/
