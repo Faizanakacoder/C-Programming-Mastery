@@ -14,7 +14,7 @@
 
 ### 📚 Learn • Practice • Build Logic • Crack Placements
 
-> “Believe and consistency are superpowers.” 💯
+> “Believe and consistency are True superpowers.” 💯
 
 </div>
 
@@ -68,7 +68,6 @@ C-Programming-Mastery/
 ├── 📁 14_College_Practical_Programs/
 ├── 📁 15_Mini_Projects_and_Applications/
 │
-├── 📁 output_screenshots/
 ├── 📄 README.md
 ├── 📄 LICENSE
 └── 📄 .gitignore
@@ -301,16 +300,6 @@ This repository helps in:
 ✅ Practicing College Programs  
 ✅ Preparing for Placements  
 ✅ Revising Before Exams  
-
----
-
-# 📸 Output Screenshots
-
-All output screenshots are available inside:
-
-```bash
-output_screenshots/
-```
 
 ---
 
