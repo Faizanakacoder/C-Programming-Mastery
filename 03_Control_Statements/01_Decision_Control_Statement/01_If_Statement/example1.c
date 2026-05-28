@@ -6,7 +6,6 @@ Topic   : If Statement
 Author  : Faizanakacoder
 ========================================
 */
-
 #include <stdio.h>
 
 int main()
