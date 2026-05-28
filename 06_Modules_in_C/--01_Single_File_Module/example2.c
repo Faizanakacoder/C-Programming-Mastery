@@ -1,6 +1,6 @@
 /*
 ===========================================
-Question: 02
+Question:02
 Write a C program to add two numbers
 using Single File Module.
 ===========================================

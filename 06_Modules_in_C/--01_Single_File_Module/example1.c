@@ -1,6 +1,6 @@
 /*
 ===========================================
-Question: 01
+Question:
 Write a C program to print "Hello World"
 using Single File Module concept.
 ===========================================

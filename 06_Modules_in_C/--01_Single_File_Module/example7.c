@@ -1,6 +1,6 @@
 /*
 ===========================================
-Question:
+Question:07
 Write a C program to print multiplication
 table of a given number.
 ===========================================
