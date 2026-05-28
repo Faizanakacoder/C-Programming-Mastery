@@ -1,70 +1,69 @@
-# 🚀 Functions and Modules in C Programming
+# 🚀 External Module in C Programming (extern Keyword)
+
+---
 
 ## 📌 Introduction
 
-Functions and Modules are one of the most important concepts in C Programming. They help in breaking a large program into smaller, reusable, and manageable parts.
+External Module in C programming is based on the `extern` keyword, which is used to access variables and functions from another file.
 
-A **function** is a block of code that performs a specific task, while a **module** is a collection of related functions organized in separate files.
-
-This topic is the foundation of **modular programming**, which is widely used in real-world software development.
+It is used in **multi-file programs where data sharing is required across different source files**.
 
 ---
 
-## 🎯 Why This Topic is Important
+## 🎯 Importance of External Module
 
-- Makes code reusable
-- Improves readability
-- Helps in debugging
-- Supports teamwork in large projects
-- Forms base of software engineering
-- Required in placements & interviews
+- Enables multi-file communication
+- Used in large-scale applications
+- Helps share global variables
+- Reduces redundancy
+- Improves modular design
 
 ---
 
-## 🌍 Real Life Usage
+## 🌍 Real Life Analogy
 
-- Operating systems (Windows, Linux)
-- Banking software systems
-- Game development engines
-- Mobile applications
-- Embedded systems (IoT devices)
-- Large enterprise applications
+Think of a **college notice board system**:
+
+- One department posts information
+- All departments can access it
+
+Same concept applies to `extern`.
 
 ---
 
 ## 📚 Learning Outcomes
 
-After completing this module, you will understand:
+After this module, you will learn:
 
-- How functions work in C
-- How to create user-defined functions
-- How to use library functions
-- Types of functions in C
-- How recursion works
-- How modular programming is implemented
-- How to split programs into multiple files
-- How header files work
+- What is extern keyword
+- How variables are shared across files
+- Global variable communication
+- Multi-file data access
+- Real-world modular structure
 
 ---
 
 ## 📂 Folder Structure
 
-```bash
-04_Functions_and_Modules/
+05_External_Module/
 │
 ├── README.md
 ├── theory.md
 ├── syntax.md
-│
-├── 01_Library_Functions/
-├── 02_User_Defined_Functions/
-├── 03_Types_of_Functions/
-│   ├── 01_No_Argument_No_Return/
-│   ├── 02_Argument_No_Return/
-│   ├── 03_No_Argument_Return/
-│   └── 04_Argument_Return/
-│
-├── 04_Recursion/
-├── 05_Storage_Classes/
-├── 06_Multi_File_Modules/
-└── 07_Function_Pointers/
+└── programs/
+    ├── program1_basic_extern/
+    ├── program2_variable_share/
+    ├── program3_multiple_files/
+    ├── program4_counter/
+    ├── program5_bank_system/
+    ├── program6_student_data/
+    ├── program7_global_update/
+    ├── program8_config_share/
+    ├── program9_flag_control/
+    └── program10_final_demo/
+
+---
+
+## 🚀 Summary
+
+External Module is the **bridge for sharing data between multiple files in C programming**.
