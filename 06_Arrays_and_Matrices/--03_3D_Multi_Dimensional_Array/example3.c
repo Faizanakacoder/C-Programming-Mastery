@@ -1,7 +1,7 @@
 /*
 ===========================================
-Question:09
-Write a C program to search element in matrix.
+Question 03:
+Write a C program to search element in 3D array.
 ===========================================
 */
 
@@ -9,13 +9,14 @@ Write a C program to search element in matrix.
 
 void main()
 {
-    int arr[2][2], i, j, key, flag = 0;
+    int arr[2][2][2], i, j, k, key, flag = 0;
 
-    printf("Enter matrix:\n");
+    printf("Enter 8 elements:\n");
 
     for(i = 0; i < 2; i++)
         for(j = 0; j < 2; j++)
-            scanf("%d", &arr[i][j]);
+            for(k = 0; k < 2; k++)
+                scanf("%d", &arr[i][j][k]);
 
     printf("Enter key: ");
     scanf("%d", &key);
@@ -24,8 +25,11 @@ void main()
     {
         for(j = 0; j < 2; j++)
         {
-            if(arr[i][j] == key)
-                flag = 1;
+            for(k = 0; k < 2; k++)
+            {
+                if(arr[i][j][k] == key)
+                    flag = 1;
+            }
         }
     }
 

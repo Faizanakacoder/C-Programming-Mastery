@@ -1,24 +1,44 @@
 /*
 ===========================================
-Q1. Print numbers using head recursion.
+Question:01
+Write a C program to input and display a matrix.
 ===========================================
 */
 
 #include<stdio.h>
 
-void print(int n)
+void main()
 {
-    if(n == 0)
-        return;
+    int arr[2][3], i, j;
 
-    print(n - 1);
+    printf("Enter 6 elements:\n");
 
-    printf("%d ", n);
+    for(i = 0; i < 2; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    printf("Matrix:\n");
+
+    for(i = 0; i < 2; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
 }
 
-int main()
-{
-    print(5);
+/*
+OUTPUT:
+Enter 6 elements:
+1 2 3 4 5 6
 
-    return 0;
-}
+Matrix:
+1 2 3
+4 5 6
+*/
