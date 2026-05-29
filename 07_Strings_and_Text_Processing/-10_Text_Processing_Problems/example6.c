@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 06:
-Write a C program to search element using pointer.
+Write a C program to remove extra spaces
+from text.
 ===========================================
 */
 
@@ -9,27 +10,30 @@ Write a C program to search element using pointer.
 
 void main()
 {
-    int arr[5], i, key, flag = 0;
-    int *p = arr;
+    char str[100], newstr[100];
+    int i = 0, j = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter Text: ");
+    gets(str);
 
-    scanf("%d", &key);
-
-    for(i = 0; i < 5; i++)
+    while(str[i] != '\0')
     {
-        if(*(p + i) == key)
-            flag = 1;
+        if(!(str[i] == ' ' && str[i+1] == ' '))
+        {
+            newstr[j++] = str[i];
+        }
+
+        i++;
     }
 
-    if(flag)
-        printf("Found");
-    else
-        printf("Not Found");
+    newstr[j] = '\0';
+
+    printf("Text After Removing Extra Spaces:\n%s", newstr);
 }
 
 /*
 OUTPUT:
-Found
+Enter Text: I  LOVE   C
+Text After Removing Extra Spaces:
+I LOVE C
 */

@@ -1,33 +1,33 @@
 /*
 ===========================================
 Question 08:
-Write a C program to count even and odd using pointer.
+Write a C program to compare two
+command line arguments.
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
-void main()
+int main(int argc, char *argv[])
 {
-    int arr[5], i, even = 0, odd = 0;
-    int *p = arr;
-
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
-
-    for(i = 0; i < 5; i++)
+    if(strcmp(argv[1], argv[2]) == 0)
     {
-        if(*(p + i) % 2 == 0)
-            even++;
-        else
-            odd++;
+        printf("Arguments are Equal");
+    }
+    else
+    {
+        printf("Arguments are Not Equal");
     }
 
-    printf("Even = %d\nOdd = %d", even, odd);
+    return 0;
 }
 
 /*
 OUTPUT:
-Even = 3
-Odd = 2
+Input:
+program.exe HELLO HELLO
+
+Output:
+Arguments are Equal
 */

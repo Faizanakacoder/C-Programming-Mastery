@@ -1,7 +1,7 @@
 /*
 ===========================================
 Question 02:
-Write a C program to find sum using pointer.
+Write a C program to count lines in text.
 ===========================================
 */
 
@@ -9,21 +9,27 @@ Write a C program to find sum using pointer.
 
 void main()
 {
-    int arr[5], i, sum = 0;
-    int *p = arr;
+    char str[200];
+    int i = 0, lines = 1;
 
-    printf("Enter 5 elements:\n");
+    printf("Enter Text: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    while(str[i] != '\0')
+    {
+        if(str[i] == '\n')
+        {
+            lines++;
+        }
 
-    for(i = 0; i < 5; i++)
-        sum += *(p + i);
+        i++;
+    }
 
-    printf("Sum = %d", sum);
+    printf("Total Lines = %d", lines);
 }
 
 /*
 OUTPUT:
-Sum = 15
+Enter Text: HELLO
+Total Lines = 1
 */

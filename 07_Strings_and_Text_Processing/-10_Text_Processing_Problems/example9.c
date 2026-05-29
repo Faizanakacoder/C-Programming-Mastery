@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 09:
-Write a C program for pointer traversal of array.
+Write a C program to replace character
+in text.
 ===========================================
 */
 
@@ -9,17 +10,37 @@ Write a C program for pointer traversal of array.
 
 void main()
 {
-    int arr[5], i;
-    int *p = arr;
+    char str[100], oldch, newch;
+    int i = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter Text: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
-        printf("Address: %u Value: %d\n", (p + i), *(p + i));
+    printf("Enter Old Character: ");
+    scanf("%c", &oldch);
+
+    getchar();
+
+    printf("Enter New Character: ");
+    scanf("%c", &newch);
+
+    while(str[i] != '\0')
+    {
+        if(str[i] == oldch)
+        {
+            str[i] = newch;
+        }
+
+        i++;
+    }
+
+    printf("Modified Text = %s", str);
 }
 
 /*
 OUTPUT:
-Address: ... Value: 10
+Enter Text: HELLO
+Enter Old Character: L
+Enter New Character: X
+Modified Text = HEXXO
 */

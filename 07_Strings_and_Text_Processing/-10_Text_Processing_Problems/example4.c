@@ -1,7 +1,7 @@
 /*
 ===========================================
 Question 04:
-Write a C program to find min using pointer.
+Write a C program to count special characters.
 ===========================================
 */
 
@@ -9,22 +9,30 @@ Write a C program to find min using pointer.
 
 void main()
 {
-    int arr[5], i, min;
-    int *p = arr;
+    char str[100];
+    int i = 0, special = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter Text: ");
+    gets(str);
 
-    min = *p;
+    while(str[i] != '\0')
+    {
+        if(!(str[i]>='A' && str[i]<='Z') &&
+           !(str[i]>='a' && str[i]<='z') &&
+           !(str[i]>='0' && str[i]<='9') &&
+           str[i] != ' ')
+        {
+            special++;
+        }
 
-    for(i = 1; i < 5; i++)
-        if(*(p + i) < min)
-            min = *(p + i);
+        i++;
+    }
 
-    printf("Min = %d", min);
+    printf("Special Characters = %d", special);
 }
 
 /*
 OUTPUT:
-Min = 5
+Enter Text: HELLO@123#
+Special Characters = 2
 */

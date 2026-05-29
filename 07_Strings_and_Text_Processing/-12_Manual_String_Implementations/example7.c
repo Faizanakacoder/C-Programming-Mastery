@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 07:
-Write a C program to sort array using pointer.
+Write a C program to count vowels
+manually in a string.
 ===========================================
 */
 
@@ -9,30 +10,30 @@ Write a C program to sort array using pointer.
 
 void main()
 {
-    int arr[5], i, j, temp;
-    int *p = arr;
+    char str[100];
+    int i = 0, vowels = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
+    while(str[i] != '\0')
     {
-        for(j = i + 1; j < 5; j++)
+        if(str[i]=='A'||str[i]=='E'||str[i]=='I'||
+           str[i]=='O'||str[i]=='U'||str[i]=='a'||
+           str[i]=='e'||str[i]=='i'||str[i]=='o'||
+           str[i]=='u')
         {
-            if(*(p + i) > *(p + j))
-            {
-                temp = *(p + i);
-                *(p + i) = *(p + j);
-                *(p + j) = temp;
-            }
+            vowels++;
         }
+
+        i++;
     }
 
-    for(i = 0; i < 5; i++)
-        printf("%d ", *(p + i));
+    printf("Total Vowels = %d", vowels);
 }
 
 /*
 OUTPUT:
-1 2 3 4 5
+Enter String: HELLO
+Total Vowels = 2
 */

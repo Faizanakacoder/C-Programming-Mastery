@@ -1,7 +1,7 @@
 /*
 ===========================================
 Question 03:
-Write a C program to find max using pointer.
+Write a C program to count spaces in text.
 ===========================================
 */
 
@@ -9,22 +9,27 @@ Write a C program to find max using pointer.
 
 void main()
 {
-    int arr[5], i, max;
-    int *p = arr;
+    char str[100];
+    int i = 0, spaces = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter Text: ");
+    gets(str);
 
-    max = *p;
+    while(str[i] != '\0')
+    {
+        if(str[i] == ' ')
+        {
+            spaces++;
+        }
 
-    for(i = 1; i < 5; i++)
-        if(*(p + i) > max)
-            max = *(p + i);
+        i++;
+    }
 
-    printf("Max = %d", max);
+    printf("Total Spaces = %d", spaces);
 }
 
 /*
 OUTPUT:
-Max = 50
+Enter Text: I LOVE C
+Total Spaces = 2
 */

@@ -1,25 +1,38 @@
 /*
 ===========================================
 Question 10:
-Write a C program to demonstrate array addresses using pointer.
+Write a C program to perform simple
+calculator operations using command
+line arguments.
 ===========================================
 */
 
 #include<stdio.h>
+#include<stdlib.h>
 
-void main()
+int main(int argc, char *argv[])
 {
-    int arr[5], i;
-    int *p = arr;
+    int a, b;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    a = atoi(argv[1]);
+    b = atoi(argv[2]);
 
-    for(i = 0; i < 5; i++)
-        printf("arr[%d] Address = %u\n", i, (p + i));
+    printf("Addition = %d\n", a + b);
+    printf("Subtraction = %d\n", a - b);
+    printf("Multiplication = %d\n", a * b);
+    printf("Division = %d", a / b);
+
+    return 0;
 }
 
 /*
 OUTPUT:
-Addresses of array elements
+Input:
+program.exe 20 10
+
+Output:
+Addition = 30
+Subtraction = 10
+Multiplication = 200
+Division = 2
 */

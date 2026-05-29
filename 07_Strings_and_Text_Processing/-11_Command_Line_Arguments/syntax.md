@@ -1,46 +1,90 @@
-# 📘 Array with Pointers - Syntax
+# 📘 Command Line Arguments - Syntax
 
 ---
 
-## 📌 Pointer Declaration
+# 📌 Main Function Syntax
 
-int *p;
-
----
-
-## 📌 Assign Array Address
-
-p = arr;
-
-OR
-
-p = &arr[0];
+int main(int argc, char *argv[])
 
 ---
 
-## 📌 Access Elements
+# 📌 Access Arguments
 
-*(p + i)
+argv[0]
+argv[1]
+argv[2]
 
 ---
 
-## 📌 Loop Traversal
+# 📌 Display Arguments
 
-for(i = 0; i < size; i++)
+printf("%s", argv[i]);
+
+---
+
+# 📌 Convert String to Integer
+
+atoi(argv[1]);
+
+---
+
+# 📌 Loop Through Arguments
+
+for(i = 0; i < argc; i++)
 {
-    printf("%d", *(p + i));
+    printf("%s", argv[i]);
 }
 
 ---
 
-## 📌 Key Rules
+# 📌 Check Argument Count
 
-- Array name is pointer
-- Pointer moves in memory blocks
-- Must match data type size
+if(argc < 3)
+{
+    printf("Insufficient Arguments");
+}
 
 ---
 
-## 🚀 Summary
+# 📌 Include Required Header Files
 
-Pointer + array = **direct memory access system**
+#include<stdio.h>
+#include<stdlib.h>
+
+---
+
+# 📌 Important Rules
+
+✅ argv stores strings  
+✅ argv[0] contains program name  
+✅ Use atoi() for integers  
+✅ Check argc before access  
+
+---
+
+# ⚠️ Common Mistakes
+
+❌ Accessing invalid argv index  
+❌ Forgetting type conversion  
+❌ Missing argument validation  
+❌ Using integer directly without atoi()  
+
+---
+
+# 🚀 Quick Revision
+
+| Term | Meaning |
+|---|---|
+| argc | Number of arguments |
+| argv | Array of strings |
+| argv[0] | Program name |
+
+---
+
+# 🎯 Summary
+
+Command line arguments allow:
+- external input
+- automation
+- dynamic execution
+- professional software development

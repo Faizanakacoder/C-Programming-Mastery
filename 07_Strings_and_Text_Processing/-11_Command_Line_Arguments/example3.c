@@ -1,30 +1,33 @@
 /*
 ===========================================
 Question 03:
-Write a C program to find max using pointer.
+Write a C program to add two numbers
+using command line arguments.
 ===========================================
 */
 
 #include<stdio.h>
+#include<stdlib.h>
 
-void main()
+int main(int argc, char *argv[])
 {
-    int arr[5], i, max;
-    int *p = arr;
+    int a, b, sum;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    a = atoi(argv[1]);
+    b = atoi(argv[2]);
 
-    max = *p;
+    sum = a + b;
 
-    for(i = 1; i < 5; i++)
-        if(*(p + i) > max)
-            max = *(p + i);
+    printf("Sum = %d", sum);
 
-    printf("Max = %d", max);
+    return 0;
 }
 
 /*
 OUTPUT:
-Max = 50
+Input:
+program.exe 10 20
+
+Output:
+Sum = 30
 */

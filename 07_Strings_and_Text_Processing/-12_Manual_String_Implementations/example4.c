@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 04:
-Write a C program to find min using pointer.
+Write a C program to compare two
+strings manually without strcmp().
 ===========================================
 */
 
@@ -9,22 +10,35 @@ Write a C program to find min using pointer.
 
 void main()
 {
-    int arr[5], i, min;
-    int *p = arr;
+    char str1[100], str2[100];
+    int i = 0, flag = 1;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter First String: ");
+    gets(str1);
 
-    min = *p;
+    printf("Enter Second String: ");
+    gets(str2);
 
-    for(i = 1; i < 5; i++)
-        if(*(p + i) < min)
-            min = *(p + i);
+    while(str1[i] != '\0' || str2[i] != '\0')
+    {
+        if(str1[i] != str2[i])
+        {
+            flag = 0;
+            break;
+        }
 
-    printf("Min = %d", min);
+        i++;
+    }
+
+    if(flag == 1)
+        printf("Strings are Equal");
+    else
+        printf("Strings are Not Equal");
 }
 
 /*
 OUTPUT:
-Min = 5
+Enter First String: HELLO
+Enter Second String: HELLO
+Strings are Equal
 */

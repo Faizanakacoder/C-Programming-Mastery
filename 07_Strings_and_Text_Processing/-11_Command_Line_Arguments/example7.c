@@ -1,38 +1,26 @@
 /*
 ===========================================
 Question 07:
-Write a C program to sort array using pointer.
+Write a C program to find length of
+command line argument.
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
-void main()
+int main(int argc, char *argv[])
 {
-    int arr[5], i, j, temp;
-    int *p = arr;
+    printf("Length = %d", strlen(argv[1]));
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
-
-    for(i = 0; i < 5; i++)
-    {
-        for(j = i + 1; j < 5; j++)
-        {
-            if(*(p + i) > *(p + j))
-            {
-                temp = *(p + i);
-                *(p + i) = *(p + j);
-                *(p + j) = temp;
-            }
-        }
-    }
-
-    for(i = 0; i < 5; i++)
-        printf("%d ", *(p + i));
+    return 0;
 }
 
 /*
 OUTPUT:
-1 2 3 4 5
+Input:
+program.exe PROGRAM
+
+Output:
+Length = 7
 */

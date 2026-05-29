@@ -1,29 +1,21 @@
 /*
 ===========================================
 Question 02:
-Write a C program to find sum using pointer.
+Write a C program to count total
+command line arguments.
 ===========================================
 */
 
 #include<stdio.h>
 
-void main()
+int main(int argc, char *argv[])
 {
-    int arr[5], i, sum = 0;
-    int *p = arr;
+    printf("Total Arguments = %d", argc);
 
-    printf("Enter 5 elements:\n");
-
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
-
-    for(i = 0; i < 5; i++)
-        sum += *(p + i);
-
-    printf("Sum = %d", sum);
+    return 0;
 }
 
 /*
 OUTPUT:
-Sum = 15
+Total Arguments = 3
 */

@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 08:
-Write a C program to count even and odd using pointer.
+Write a C program to convert string
+into uppercase manually.
 ===========================================
 */
 
@@ -9,25 +10,27 @@ Write a C program to count even and odd using pointer.
 
 void main()
 {
-    int arr[5], i, even = 0, odd = 0;
-    int *p = arr;
+    char str[100];
+    int i = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
+    while(str[i] != '\0')
     {
-        if(*(p + i) % 2 == 0)
-            even++;
-        else
-            odd++;
+        if(str[i] >= 'a' && str[i] <= 'z')
+        {
+            str[i] = str[i] - 32;
+        }
+
+        i++;
     }
 
-    printf("Even = %d\nOdd = %d", even, odd);
+    printf("Uppercase String = %s", str);
 }
 
 /*
 OUTPUT:
-Even = 3
-Odd = 2
+Enter String: hello
+Uppercase String = HELLO
 */

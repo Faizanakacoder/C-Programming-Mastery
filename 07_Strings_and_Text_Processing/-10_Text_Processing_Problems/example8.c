@@ -1,33 +1,36 @@
 /*
 ===========================================
 Question 08:
-Write a C program to count even and odd using pointer.
+Write a C program to count occurrence
+of a specific word.
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
 void main()
 {
-    int arr[5], i, even = 0, odd = 0;
-    int *p = arr;
+    char str[100], word[20];
+    int count = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter Sentence: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
+    printf("Enter Word: ");
+    gets(word);
+
+    if(strstr(str, word) != NULL)
     {
-        if(*(p + i) % 2 == 0)
-            even++;
-        else
-            odd++;
+        count++;
     }
 
-    printf("Even = %d\nOdd = %d", even, odd);
+    printf("Word Frequency = %d", count);
 }
 
 /*
 OUTPUT:
-Even = 3
-Odd = 2
+Enter Sentence: I LOVE C
+Enter Word: LOVE
+Word Frequency = 1
 */

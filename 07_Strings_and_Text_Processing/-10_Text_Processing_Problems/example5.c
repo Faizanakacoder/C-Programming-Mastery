@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 05:
-Write a C program to reverse array using pointer.
+Write a C program to capitalize first
+letter of each word.
 ===========================================
 */
 
@@ -9,19 +10,34 @@ Write a C program to reverse array using pointer.
 
 void main()
 {
-    int arr[5], i;
-    int *p = arr;
+    char str[100];
+    int i = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter Sentence: ");
+    gets(str);
 
-    printf("Reverse:\n");
+    if(str[0] >= 'a' && str[0] <= 'z')
+    {
+        str[0] = str[0] - 32;
+    }
 
-    for(i = 4; i >= 0; i--)
-        printf("%d ", *(p + i));
+    while(str[i] != '\0')
+    {
+        if(str[i] == ' ' &&
+           str[i+1] >= 'a' &&
+           str[i+1] <= 'z')
+        {
+            str[i+1] = str[i+1] - 32;
+        }
+
+        i++;
+    }
+
+    printf("Modified Sentence = %s", str);
 }
 
 /*
 OUTPUT:
-5 4 3 2 1
+Enter Sentence: hello world
+Modified Sentence = Hello World
 */

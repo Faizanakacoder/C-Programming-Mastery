@@ -1,27 +1,25 @@
 /*
 ===========================================
 Question 05:
-Write a C program to reverse array using pointer.
+Write a C program to display name
+using command line argument.
 ===========================================
 */
 
 #include<stdio.h>
 
-void main()
+int main(int argc, char *argv[])
 {
-    int arr[5], i;
-    int *p = arr;
+    printf("Name = %s", argv[1]);
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
-
-    printf("Reverse:\n");
-
-    for(i = 4; i >= 0; i--)
-        printf("%d ", *(p + i));
+    return 0;
 }
 
 /*
 OUTPUT:
-5 4 3 2 1
+Input:
+program.exe FAIZAN
+
+Output:
+Name = FAIZAN
 */

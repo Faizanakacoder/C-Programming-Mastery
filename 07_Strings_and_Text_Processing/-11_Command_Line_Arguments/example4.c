@@ -1,30 +1,33 @@
 /*
 ===========================================
 Question 04:
-Write a C program to find min using pointer.
+Write a C program to multiply two numbers
+using command line arguments.
 ===========================================
 */
 
 #include<stdio.h>
+#include<stdlib.h>
 
-void main()
+int main(int argc, char *argv[])
 {
-    int arr[5], i, min;
-    int *p = arr;
+    int a, b, multiplication;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    a = atoi(argv[1]);
+    b = atoi(argv[2]);
 
-    min = *p;
+    multiplication = a * b;
 
-    for(i = 1; i < 5; i++)
-        if(*(p + i) < min)
-            min = *(p + i);
+    printf("Multiplication = %d", multiplication);
 
-    printf("Min = %d", min);
+    return 0;
 }
 
 /*
 OUTPUT:
-Min = 5
+Input:
+program.exe 5 4
+
+Output:
+Multiplication = 20
 */

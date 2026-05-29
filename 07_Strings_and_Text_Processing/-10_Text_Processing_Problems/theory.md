@@ -1,76 +1,149 @@
-# 📘 Array with Pointers - Theory
+# 📘 Text Processing Problems - Theory
 
 ---
 
-## 📌 What is Array with Pointer?
+# 📌 What is Text Processing?
 
-An array name acts as a pointer to the first element.
+Text Processing means:
+handling and manipulating textual data according to program requirements.
+
+Examples:
+- formatting text
+- counting words
+- removing spaces
+- searching patterns
+- replacing words
+
+---
+
+# 📌 Why Text Processing is Important?
+
+Modern software systems constantly process text.
+
+Examples:
+- social media posts
+- search queries
+- passwords
+- emails
+- chat messages
+
+Hence text processing is essential.
+
+---
+
+# 📌 Word Counting
+
+Words are separated by:
+spaces.
+
+Logic:
+count spaces + 1
+
+---
+
+# 📌 Space Handling
+
+Programs can:
+- count spaces
+- remove spaces
+- remove extra spaces
+
+---
+
+# 📌 Frequency Analysis
+
+Frequency analysis counts:
+how many times characters or words appear.
+
+---
+
+# 📌 Capitalization
+
+Used for:
+proper text formatting.
 
 Example:
-int arr[5];
-arr == &arr[0]
+
+hello world
+
+becomes:
+
+Hello World
 
 ---
 
-## 🧠 Pointer Arithmetic
+# 📌 Word Replacement
 
-If:
-p = arr;
-
-Then:
-p + 1 → next element
-p + 2 → third element
+Specific words are searched and replaced.
 
 ---
 
-## ⚙️ Memory Concept
+# 📌 Text Statistics
 
-arr[0] → *p  
-arr[1] → *(p+1)  
-arr[2] → *(p+2)
-
----
-
-## 📊 How It Works
-
-- Array stored in continuous memory
-- Pointer moves step-by-step
-- Each step depends on data type size
+Statistics include:
+- total characters
+- total words
+- vowels
+- spaces
+- special characters
 
 ---
 
-## 🌍 Real Life Example
+# 🌍 Real Life Analogy
 
-- Row of seats in cinema
-- Pointer = moving seat number
-- Array = full row
-
----
-
-## 📌 Advantages
-
-✔ Fast access  
-✔ Efficient memory usage  
-✔ Core of data structures  
+Think of text processing like:
+editing and analyzing documents in a text editor.
 
 ---
 
-## ❌ Disadvantages
+# 📌 Advantages
 
-❌ Easy to misuse pointers  
-❌ Can cause segmentation faults  
-
----
-
-## 🎯 Interview Questions
-
-- Difference between array and pointer?
-- What is pointer arithmetic?
-- Why array name is pointer?
-- Can pointer modify array?
+✅ Strong logic building  
+✅ Real-world applications  
+✅ Better string understanding  
+✅ Useful in interviews  
 
 ---
 
-## 🚀 Conclusion
+# ❌ Disadvantages
 
-Array with pointers is **foundation of memory-level programming in C**.
+❌ Complex traversal  
+❌ Multiple conditions required  
+❌ Difficult debugging for beginners  
+
+---
+
+# 🧪 Dry Run Example
+
+Input:
+I LOVE C
+
+Traversal:
+
+I → space → LOVE → space → C
+
+Spaces:
+2
+
+Words:
+3
+
+---
+
+# 🎯 Viva Questions
+
+1. What is text processing?
+2. How are words counted?
+3. What is frequency analysis?
+4. How to remove extra spaces?
+5. Why traversal is important?
+
+---
+
+# 🚀 Conclusion
+
+Text Processing Problems are essential for:
+- professional programming
+- software development
+- interview preparation
+- real-world applications

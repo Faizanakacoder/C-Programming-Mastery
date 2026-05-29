@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 02:
-Write a C program to find sum using pointer.
+Write a C program to copy one string
+to another manually without strcpy().
 ===========================================
 */
 
@@ -9,21 +10,25 @@ Write a C program to find sum using pointer.
 
 void main()
 {
-    int arr[5], i, sum = 0;
-    int *p = arr;
+    char source[100], destination[100];
+    int i = 0;
 
-    printf("Enter 5 elements:\n");
+    printf("Enter String: ");
+    gets(source);
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    while(source[i] != '\0')
+    {
+        destination[i] = source[i];
+        i++;
+    }
 
-    for(i = 0; i < 5; i++)
-        sum += *(p + i);
+    destination[i] = '\0';
 
-    printf("Sum = %d", sum);
+    printf("Copied String = %s", destination);
 }
 
 /*
 OUTPUT:
-Sum = 15
+Enter String: PROGRAM
+Copied String = PROGRAM
 */

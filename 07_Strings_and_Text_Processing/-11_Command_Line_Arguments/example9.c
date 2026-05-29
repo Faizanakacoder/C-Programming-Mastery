@@ -1,25 +1,37 @@
 /*
 ===========================================
 Question 09:
-Write a C program for pointer traversal of array.
+Write a C program to convert command line
+argument into uppercase.
 ===========================================
 */
 
 #include<stdio.h>
 
-void main()
+int main(int argc, char *argv[])
 {
-    int arr[5], i;
-    int *p = arr;
+    int i = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    while(argv[1][i] != '\0')
+    {
+        if(argv[1][i] >= 'a' && argv[1][i] <= 'z')
+        {
+            argv[1][i] = argv[1][i] - 32;
+        }
 
-    for(i = 0; i < 5; i++)
-        printf("Address: %u Value: %d\n", (p + i), *(p + i));
+        i++;
+    }
+
+    printf("Uppercase String = %s", argv[1]);
+
+    return 0;
 }
 
 /*
 OUTPUT:
-Address: ... Value: 10
+Input:
+program.exe hello
+
+Output:
+Uppercase String = HELLO
 */

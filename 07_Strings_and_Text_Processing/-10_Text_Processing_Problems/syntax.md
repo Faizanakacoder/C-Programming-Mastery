@@ -1,46 +1,115 @@
-# 📘 Array with Pointers - Syntax
+# 📘 Text Processing Problems - Syntax
 
 ---
 
-## 📌 Pointer Declaration
+# 📌 Count Words
 
-int *p;
-
----
-
-## 📌 Assign Array Address
-
-p = arr;
-
-OR
-
-p = &arr[0];
-
----
-
-## 📌 Access Elements
-
-*(p + i)
-
----
-
-## 📌 Loop Traversal
-
-for(i = 0; i < size; i++)
+if(str[i] == ' ')
 {
-    printf("%d", *(p + i));
+    words++;
 }
 
 ---
 
-## 📌 Key Rules
+# 📌 Count Spaces
 
-- Array name is pointer
-- Pointer moves in memory blocks
-- Must match data type size
+if(str[i] == ' ')
+{
+    spaces++;
+}
 
 ---
 
-## 🚀 Summary
+# 📌 Count Special Characters
 
-Pointer + array = **direct memory access system**
+if(!(str[i]>='A' && str[i]<='Z') &&
+   !(str[i]>='a' && str[i]<='z') &&
+   !(str[i]>='0' && str[i]<='9'))
+{
+    special++;
+}
+
+---
+
+# 📌 Capitalize First Letter
+
+if(str[i] >= 'a' && str[i] <= 'z')
+{
+    str[i] = str[i] - 32;
+}
+
+---
+
+# 📌 Remove Extra Spaces
+
+if(!(str[i]==' ' && str[i+1]==' '))
+{
+    newstr[j++] = str[i];
+}
+
+---
+
+# 📌 Character Frequency
+
+if(str[i] == ch)
+{
+    count++;
+}
+
+---
+
+# 📌 Replace Character
+
+if(str[i] == old)
+{
+    str[i] = new;
+}
+
+---
+
+# 📌 Traverse Text
+
+while(str[i] != '\0')
+{
+    i++;
+}
+
+---
+
+# 📌 Important Rules
+
+✅ Stop at '\0'  
+✅ Handle spaces carefully  
+✅ Use correct indexing  
+✅ Use ASCII ranges properly  
+
+---
+
+# ⚠️ Common Mistakes
+
+❌ Infinite loops  
+❌ Missing '\0'  
+❌ Incorrect space handling  
+❌ Invalid indexing  
+
+---
+
+# 🚀 Quick Revision
+
+| Operation | Logic |
+|---|---|
+| Count Words | Count spaces |
+| Frequency | Compare characters |
+| Replace | Match and modify |
+| Capitalize | ASCII conversion |
+
+---
+
+# 🎯 Summary
+
+Text processing uses:
+- loops
+- strings
+- traversal
+- conditions
+- logical analysis

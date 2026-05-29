@@ -1,7 +1,7 @@
 /*
 ===========================================
 Question 10:
-Write a C program to demonstrate array addresses using pointer.
+Write a C program to display text statistics.
 ===========================================
 */
 
@@ -9,17 +9,39 @@ Write a C program to demonstrate array addresses using pointer.
 
 void main()
 {
-    int arr[5], i;
-    int *p = arr;
+    char str[100];
+    int i = 0;
+    int characters = 0, spaces = 0, digits = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter Text: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
-        printf("arr[%d] Address = %u\n", i, (p + i));
+    while(str[i] != '\0')
+    {
+        characters++;
+
+        if(str[i] == ' ')
+        {
+            spaces++;
+        }
+
+        if(str[i] >= '0' && str[i] <= '9')
+        {
+            digits++;
+        }
+
+        i++;
+    }
+
+    printf("Characters = %d\n", characters);
+    printf("Spaces = %d\n", spaces);
+    printf("Digits = %d", digits);
 }
 
 /*
 OUTPUT:
-Addresses of array elements
+Enter Text: HELLO 123
+Characters = 9
+Spaces = 1
+Digits = 3
 */

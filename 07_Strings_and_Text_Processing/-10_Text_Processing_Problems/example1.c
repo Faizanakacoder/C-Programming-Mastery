@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 01:
-Write a C program to display array using pointer.
+Write a C program to count total words
+in a sentence.
 ===========================================
 */
 
@@ -9,24 +10,27 @@ Write a C program to display array using pointer.
 
 void main()
 {
-    int arr[5], i;
-    int *p;
+    char str[100];
+    int i = 0, words = 1;
 
-    p = arr;
+    printf("Enter Sentence: ");
+    gets(str);
 
-    printf("Enter 5 elements:\n");
+    while(str[i] != '\0')
+    {
+        if(str[i] == ' ')
+        {
+            words++;
+        }
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+        i++;
+    }
 
-    printf("Array Elements:\n");
-
-    for(i = 0; i < 5; i++)
-        printf("%d ", *(p + i));
+    printf("Total Words = %d", words);
 }
 
 /*
 OUTPUT:
-1 2 3 4 5
-1 2 3 4 5
+Enter Sentence: I LOVE C
+Total Words = 3
 */
