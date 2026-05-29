@@ -1,8 +1,8 @@
 /*
 ===========================================
 Question 10:
-Write a C program to find frequency
-of a character manually in a string.
+Write a basic C program
+demonstrating double pointer.
 ===========================================
 */
 
@@ -10,31 +10,26 @@ of a character manually in a string.
 
 void main()
 {
-    char str[100], ch;
-    int i = 0, count = 0;
+    // Integer variable
+    int num = 250;
 
-    printf("Enter String: ");
-    gets(str);
+    // Pointer declaration
+    int *ptr = &num;
 
-    printf("Enter Character: ");
-    scanf("%c", &ch);
+    // Double pointer declaration
+    int **dptr = &ptr;
 
-    while(str[i] != '\0')
-    {
-        if(str[i] == ch)
-        {
-            count++;
-        }
+    // Display values
+    printf("Number = %d\n", num);
 
-        i++;
-    }
+    printf("Using Pointer = %d\n", *ptr);
 
-    printf("Frequency of %c = %d", ch, count);
+    printf("Using Double Pointer = %d", **dptr);
 }
 
 /*
 OUTPUT:
-Enter String: HELLO
-Enter Character: L
-Frequency of L = 2
+Number = 250
+Using Pointer = 250
+Using Double Pointer = 250
 */

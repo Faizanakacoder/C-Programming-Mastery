@@ -1,8 +1,8 @@
 /*
 ===========================================
 Question 03:
-Write a C program to concatenate two
-strings manually without strcat().
+Write a C program to access
+value using double pointer.
 ===========================================
 */
 
@@ -10,36 +10,20 @@ strings manually without strcat().
 
 void main()
 {
-    char str1[100], str2[100];
-    int i = 0, j = 0;
+    // Variable declaration
+    int value = 100;
 
-    printf("Enter First String: ");
-    gets(str1);
+    // Pointer declaration
+    int *ptr = &value;
 
-    printf("Enter Second String: ");
-    gets(str2);
+    // Double pointer declaration
+    int **dptr = &ptr;
 
-    while(str1[i] != '\0')
-    {
-        i++;
-    }
-
-    while(str2[j] != '\0')
-    {
-        str1[i] = str2[j];
-
-        i++;
-        j++;
-    }
-
-    str1[i] = '\0';
-
-    printf("Concatenated String = %s", str1);
+    // Access value
+    printf("Stored Value = %d", **dptr);
 }
 
 /*
 OUTPUT:
-Enter First String: HELLO
-Enter Second String: WORLD
-Concatenated String = HELLOWORLD
+Stored Value = 100
 */

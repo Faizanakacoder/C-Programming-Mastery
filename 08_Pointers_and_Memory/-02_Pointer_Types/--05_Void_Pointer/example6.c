@@ -1,8 +1,8 @@
 /*
 ===========================================
 Question 06:
-Write a C program to check whether
-a string is palindrome or not manually.
+Write a C program using
+void pointer with array.
 ===========================================
 */
 
@@ -10,34 +10,23 @@ a string is palindrome or not manually.
 
 void main()
 {
-    char str[100];
-    int i, length = 0, flag = 1;
+    // Integer array
+    int arr[3] = {10,20,30};
 
-    printf("Enter String: ");
-    gets(str);
+    // Void pointer declaration
+    void *ptr = arr;
 
-    while(str[length] != '\0')
-    {
-        length++;
-    }
+    // Display array elements
+    printf("%d\n", *((int *)ptr));
 
-    for(i = 0; i < length / 2; i++)
-    {
-        if(str[i] != str[length - i - 1])
-        {
-            flag = 0;
-            break;
-        }
-    }
+    printf("%d\n", *((int *)ptr + 1));
 
-    if(flag == 1)
-        printf("Palindrome String");
-    else
-        printf("Not Palindrome");
+    printf("%d", *((int *)ptr + 2));
 }
 
 /*
 OUTPUT:
-Enter String: MADAM
-Palindrome String
+10
+20
+30
 */

@@ -1,36 +1,29 @@
 /*
 ===========================================
 Question 09:
-Write a C program to convert string
-into lowercase manually.
+Write a C program using
+void pointer with function.
 ===========================================
 */
 
 #include<stdio.h>
 
+void display(void *ptr)
+{
+    // Display integer value
+    printf("Value = %d", *(int *)ptr);
+}
+
 void main()
 {
-    char str[100];
-    int i = 0;
+    // Integer variable
+    int num = 999;
 
-    printf("Enter String: ");
-    gets(str);
-
-    while(str[i] != '\0')
-    {
-        if(str[i] >= 'A' && str[i] <= 'Z')
-        {
-            str[i] = str[i] + 32;
-        }
-
-        i++;
-    }
-
-    printf("Lowercase String = %s", str);
+    // Function call
+    display(&num);
 }
 
 /*
 OUTPUT:
-Enter String: HELLO
-Lowercase String = hello
+Value = 999
 */

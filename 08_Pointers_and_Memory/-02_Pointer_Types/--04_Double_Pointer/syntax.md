@@ -1,130 +1,110 @@
-# 📘 Manual String Implementations - Syntax
+# 📘 Double Pointer - Syntax
 
 ---
 
-# 📌 Manual String Length
+# 📌 Double Pointer Declaration
 
-while(str[i] != '\0')
-{
-count++;
-i++;
-}
+int **dptr;
 
 ---
 
-# 📌 Manual String Copy
+# 📌 Double Pointer Initialization
 
-while(source[i] != '\0')
-{
-destination[i] = source[i];
-i++;
-}
+int num = 10;
 
-destination[i] = '\0';
+int *ptr = #
+
+int **dptr = &ptr;
 
 ---
 
-# 📌 Manual String Concatenation
+# 📌 Access Value using Double Pointer
 
-while(str1[i] != '\0')
-{
-i++;
-}
-
-while(str2[j] != '\0')
-{
-str1[i] = str2[j];
-
-```
-i++;
-j++;
-```
-
-}
-
-str1[i] = '\0';
+printf("%d", **dptr);
 
 ---
 
-# 📌 Manual String Comparison
+# 📌 Access Pointer Address
 
-while(str1[i] == str2[i])
+printf("%u", *dptr);
+
+---
+
+# 📌 Modify Value using Double Pointer
+
+**dptr = 50;
+
+---
+
+# 📌 Double Pointer with Function
+
+void display(int **dptr)
 {
-i++;
+printf("%d", **dptr);
 }
 
 ---
 
-# 📌 Manual Reverse
+# 📌 Double Pointer with Array
 
-for(i = length - 1; i >= 0; i--)
-{
-printf("%c", str[i]);
-}
+int arr[3] = {1,2,3};
 
----
+int *ptr = arr;
 
-# 📌 Palindrome Check
-
-if(str[i] != str[j])
-{
-flag = 0;
-}
-
----
-
-# 📌 Uppercase Conversion
-
-if(str[i] >= 'a' && str[i] <= 'z')
-{
-str[i] = str[i] - 32;
-}
-
----
-
-# 📌 Lowercase Conversion
-
-if(str[i] >= 'A' && str[i] <= 'Z')
-{
-str[i] = str[i] + 32;
-}
+int **dptr = &ptr;
 
 ---
 
 # 📌 Important Rules
 
-✅ Strings end with '\0'
-✅ Use correct indexing
-✅ Stop traversal properly
-✅ Handle memory carefully
+✅ Use `**` for double dereferencing
+✅ Initialize pointers correctly
+✅ Match datatype properly
 
 ---
 
 # ⚠️ Common Mistakes
 
-❌ Missing null character
-❌ Infinite loops
-❌ Wrong array indexing
-❌ Incorrect loop condition
+❌ Using single dereference instead of double
+❌ Wrong address assignment
+❌ Uninitialized double pointers
 
 ---
 
-# 🚀 Quick Revision
+# 📌 Quick Revision Table
 
-| Operation | Logic              |
-| --------- | ------------------ |
-| strlen    | Count characters   |
-| strcpy    | Copy characters    |
-| strcat    | Append strings     |
-| strcmp    | Compare characters |
+| Syntax     | Meaning        |
+| ---------- | -------------- |
+| int **dptr | Double pointer |
+| *dptr      | Pointer value  |
+| **dptr     | Actual value   |
+
+---
+
+# 📌 Example Syntax
+
+#include<stdio.h>
+
+void main()
+{
+int num = 10;
+
+```
+int *ptr = &num;
+
+int **dptr = &ptr;
+
+printf("%d", **dptr);
+```
+
+}
 
 ---
 
 # 🎯 Summary
 
-Manual implementations improve:
+Double Pointer syntax helps:
 
-* logic
-* memory understanding
-* placement preparation
-* professional coding skills
+* manage nested memory
+* perform advanced pointer operations
+* understand dynamic memory

@@ -1,68 +1,68 @@
-# 🔧 Manual String Implementations in C Programming
+# 🔁 Double Pointer in C Programming
 
 ---
 
 # 📌 Introduction
 
-Manual String Implementation means:
-creating string operations manually without using built-in library functions.
+A Double Pointer is a pointer that:
+stores the address of another pointer.
 
-Instead of using:
+It is also called:
 
-* strlen()
-* strcpy()
-* strcat()
-* strcmp()
+✅ Pointer to Pointer
+✅ Nested Pointer
 
-we create our own logic using:
+Example:
 
-* loops
-* arrays
-* pointers
+int num = 10;
 
-This topic is extremely important because it develops:
-✅ strong programming logic
-✅ deep understanding of strings
-✅ interview problem-solving skills
-✅ memory handling knowledge
+int *ptr = #
+
+int **dptr = &ptr;
+
+Here:
+
+* `num` stores integer value
+* `ptr` stores address of num
+* `dptr` stores address of ptr
+
+Double pointers are used in:
+✅ dynamic memory allocation
+✅ arrays of pointers
+✅ function arguments
+✅ advanced memory handling
 
 ---
 
-# 🎯 Why This Topic is Important?
+# 🎯 Why Double Pointer is Important?
 
-Most beginners directly use:
-`string.h`
+Double pointers are important because:
 
-But professional programmers must understand:
-how string functions actually work internally.
-
-Manual implementation helps in:
-
-* placements
-* coding interviews
-* DSA preparation
-* low-level programming
-* compiler understanding
+✅ They manage pointers dynamically
+✅ Used in advanced memory allocation
+✅ Required in linked data structures
+✅ Useful in multidimensional arrays
+✅ Important for professional C programming
 
 ---
 
 # 🌍 Real Life Applications
 
-## 💻 Compiler Design
+## 💻 Operating Systems
 
-Compilers manually process tokens and strings.
+Double pointers manage dynamic memory tables.
 
-## 🔐 Encryption Systems
+## 🌐 String Arrays
 
-Custom string logic is implemented manually.
+Array of strings uses double pointers.
 
-## 🖥️ Operating Systems
+## 🤖 Data Structures
 
-Kernel-level string functions are often manually written.
+Linked lists and trees use nested pointers.
 
-## 🤖 Embedded Systems
+## 🎮 Game Engines
 
-Library support may not always exist.
+Dynamic object memory management.
 
 ---
 
@@ -70,77 +70,78 @@ Library support may not always exist.
 
 After completing this topic, you will learn:
 
-✅ Manual string length calculation
-✅ Manual string copy
-✅ Manual concatenation
-✅ Manual comparison
-✅ String reversal logic
-✅ Character counting
-✅ Vowel analysis
-✅ Palindrome checking
-✅ Manual uppercase/lowercase conversion
+✅ What is double pointer
+✅ Declaration and initialization
+✅ Accessing value using double pointer
+✅ Accessing pointer address
+✅ Double dereferencing
+✅ Double pointer with functions
+✅ Dynamic memory concepts
+✅ Nested memory access
 
 ---
 
 # 📂 Folder Structure
 
-12_Manual_String_Implementations/
+04_Double_Pointer/
 │
 ├── README.md
 ├── theory.md
 ├── syntax.md
 └── programs/
-├── 01_manual_strlen.c
-├── 02_manual_strcpy.c
-├── 03_manual_strcat.c
-├── 04_manual_strcmp.c
-├── 05_manual_string_reverse.c
-├── 06_manual_palindrome_check.c
-├── 07_manual_vowel_count.c
-├── 08_manual_uppercase_conversion.c
-├── 09_manual_lowercase_conversion.c
-└── 10_manual_character_frequency.c
+├── program_01.c
+├── program_02.c
+├── program_03.c
+├── program_04.c
+├── program_05.c
+├── program_06.c
+├── program_07.c
+├── program_08.c
+├── program_09.c
+└── program_10.c
 
 ---
 
-# 📖 Topics Covered
+# 📖 Programs Included
 
-| Topic          | Description        |
-| -------------- | ------------------ |
-| Manual strlen  | Find string length |
-| Manual strcpy  | Copy strings       |
-| Manual strcat  | Join strings       |
-| Manual strcmp  | Compare strings    |
-| Reverse String | Reverse manually   |
-| Palindrome     | Check palindrome   |
+| Program No | Program Name                      |
+| ---------- | --------------------------------- |
+| 01         | Declare Double Pointer            |
+| 02         | Store Pointer Address             |
+| 03         | Access Value using Double Pointer |
+| 04         | Display Addresses                 |
+| 05         | Modify Value using Double Pointer |
+| 06         | Double Dereferencing              |
+| 07         | Double Pointer with Function      |
+| 08         | User Input using Double Pointer   |
+| 09         | Array with Double Pointer         |
+| 10         | Basic Double Pointer Demo         |
 
 ---
 
 # ⚠️ Common Beginner Mistakes
 
-❌ Forgetting '\0'
-❌ Infinite loops
-❌ Incorrect indexing
-❌ Missing null termination
-❌ Buffer overflow
+❌ Confusing `*` and `**`
+❌ Wrong dereferencing
+❌ Using uninitialized pointers
+❌ Incorrect address assignment
 
 ---
 
 # 🎯 Interview Questions
 
-* How does strlen() work internally?
-* How to copy string manually?
-* How to compare strings manually?
-* Why strings end with '\0'?
-* How to reverse string manually?
+* What is double pointer?
+* Why double pointers are used?
+* Difference between pointer and double pointer?
+* What is double dereferencing?
 
 ---
 
 # 🚀 Final Summary
 
-Manual String Implementation is one of the most important topics for:
+Double Pointers are essential for:
 
-* placements
-* interviews
-* advanced C programming
-* strong logic building
+* advanced memory handling
+* dynamic programming
+* data structures
+* professional C development

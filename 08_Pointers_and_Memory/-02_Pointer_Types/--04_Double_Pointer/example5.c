@@ -1,8 +1,8 @@
 /*
 ===========================================
 Question 05:
-Write a C program to reverse a string
-manually without strrev().
+Write a C program to modify
+value using double pointer.
 ===========================================
 */
 
@@ -10,28 +10,23 @@ manually without strrev().
 
 void main()
 {
-    char str[100];
-    int i = 0, length = 0;
+    // Variable declaration
+    int num = 10;
 
-    printf("Enter String: ");
-    gets(str);
+    // Pointer declaration
+    int *ptr = &num;
 
-    while(str[i] != '\0')
-    {
-        length++;
-        i++;
-    }
+    // Double pointer declaration
+    int **dptr = &ptr;
 
-    printf("Reversed String = ");
+    // Modify value
+    **dptr = 500;
 
-    for(i = length - 1; i >= 0; i--)
-    {
-        printf("%c", str[i]);
-    }
+    // Display modified value
+    printf("Modified Value = %d", num);
 }
 
 /*
 OUTPUT:
-Enter String: HELLO
-Reversed String = OLLEH
+Modified Value = 500
 */

@@ -1,39 +1,35 @@
 /*
 ===========================================
 Question 07:
-Write a C program to count vowels
-manually in a string.
+Write a C program using
+double pointer with function.
 ===========================================
 */
 
 #include<stdio.h>
 
+void display(int **dptr)
+{
+    // Display value
+    printf("Value = %d", **dptr);
+}
+
 void main()
 {
-    char str[100];
-    int i = 0, vowels = 0;
+    // Integer variable
+    int num = 1000;
 
-    printf("Enter String: ");
-    gets(str);
+    // Pointer declaration
+    int *ptr = &num;
 
-    while(str[i] != '\0')
-    {
-        if(str[i]=='A'||str[i]=='E'||str[i]=='I'||
-           str[i]=='O'||str[i]=='U'||str[i]=='a'||
-           str[i]=='e'||str[i]=='i'||str[i]=='o'||
-           str[i]=='u')
-        {
-            vowels++;
-        }
+    // Double pointer declaration
+    int **dptr = &ptr;
 
-        i++;
-    }
-
-    printf("Total Vowels = %d", vowels);
+    // Function call
+    display(dptr);
 }
 
 /*
 OUTPUT:
-Enter String: HELLO
-Total Vowels = 2
+Value = 1000
 */

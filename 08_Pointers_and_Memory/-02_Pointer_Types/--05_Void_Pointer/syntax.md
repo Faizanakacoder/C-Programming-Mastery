@@ -1,130 +1,95 @@
-# 📘 Manual String Implementations - Syntax
+# 📘 Void Pointer - Syntax
 
 ---
 
-# 📌 Manual String Length
+# 📌 Void Pointer Declaration
 
-while(str[i] != '\0')
-{
-count++;
-i++;
-}
+void *ptr;
 
 ---
 
-# 📌 Manual String Copy
+# 📌 Void Pointer Initialization
 
-while(source[i] != '\0')
-{
-destination[i] = source[i];
-i++;
-}
+int num = 10;
 
-destination[i] = '\0';
+void *ptr = #
 
 ---
 
-# 📌 Manual String Concatenation
+# 📌 Typecasting Void Pointer
 
-while(str1[i] != '\0')
-{
-i++;
-}
-
-while(str2[j] != '\0')
-{
-str1[i] = str2[j];
-
-```
-i++;
-j++;
-```
-
-}
-
-str1[i] = '\0';
+printf("%d", *(int *)ptr);
 
 ---
 
-# 📌 Manual String Comparison
+# 📌 Float Typecasting
 
-while(str1[i] == str2[i])
-{
-i++;
-}
+printf("%.2f", *(float *)ptr);
 
 ---
 
-# 📌 Manual Reverse
+# 📌 Character Typecasting
 
-for(i = length - 1; i >= 0; i--)
-{
-printf("%c", str[i]);
-}
+printf("%c", *(char *)ptr);
 
 ---
 
-# 📌 Palindrome Check
+# 📌 Void Pointer with malloc()
 
-if(str[i] != str[j])
-{
-flag = 0;
-}
+void *ptr;
 
----
-
-# 📌 Uppercase Conversion
-
-if(str[i] >= 'a' && str[i] <= 'z')
-{
-str[i] = str[i] - 32;
-}
-
----
-
-# 📌 Lowercase Conversion
-
-if(str[i] >= 'A' && str[i] <= 'Z')
-{
-str[i] = str[i] + 32;
-}
+ptr = malloc(sizeof(int));
 
 ---
 
 # 📌 Important Rules
 
-✅ Strings end with '\0'
-✅ Use correct indexing
-✅ Stop traversal properly
-✅ Handle memory carefully
+✅ Typecasting is mandatory
+✅ Void pointer can store any address
+✅ Cannot dereference directly
 
 ---
 
 # ⚠️ Common Mistakes
 
-❌ Missing null character
-❌ Infinite loops
-❌ Wrong array indexing
-❌ Incorrect loop condition
+❌ Direct dereferencing
+❌ Wrong datatype casting
+❌ Uninitialized void pointer
 
 ---
 
-# 🚀 Quick Revision
+# 📌 Quick Revision Table
 
-| Operation | Logic              |
-| --------- | ------------------ |
-| strlen    | Count characters   |
-| strcpy    | Copy characters    |
-| strcat    | Append strings     |
-| strcmp    | Compare characters |
+| Syntax      | Meaning              |
+| ----------- | -------------------- |
+| void *ptr   | Generic pointer      |
+| (int *)ptr  | Integer typecast     |
+| *(int *)ptr | Access integer value |
+
+---
+
+# 📌 Example Syntax
+
+#include<stdio.h>
+
+void main()
+{
+int num = 10;
+
+```
+void *ptr = &num;
+
+printf("%d", *(int *)ptr);
+```
+
+}
 
 ---
 
 # 🎯 Summary
 
-Manual implementations improve:
+Void Pointer syntax helps:
 
-* logic
-* memory understanding
-* placement preparation
-* professional coding skills
+* generic memory handling
+* reusable programming
+* dynamic memory operations

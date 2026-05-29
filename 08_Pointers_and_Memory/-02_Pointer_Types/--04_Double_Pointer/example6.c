@@ -1,8 +1,8 @@
 /*
 ===========================================
 Question 06:
-Write a C program to check whether
-a string is palindrome or not manually.
+Write a C program demonstrating
+double dereferencing.
 ===========================================
 */
 
@@ -10,34 +10,23 @@ a string is palindrome or not manually.
 
 void main()
 {
-    char str[100];
-    int i, length = 0, flag = 1;
+    // Integer variable
+    int num = 99;
 
-    printf("Enter String: ");
-    gets(str);
+    // Pointer declaration
+    int *ptr = &num;
 
-    while(str[length] != '\0')
-    {
-        length++;
-    }
+    // Double pointer declaration
+    int **dptr = &ptr;
 
-    for(i = 0; i < length / 2; i++)
-    {
-        if(str[i] != str[length - i - 1])
-        {
-            flag = 0;
-            break;
-        }
-    }
+    // Display values
+    printf("Using Pointer = %d\n", *ptr);
 
-    if(flag == 1)
-        printf("Palindrome String");
-    else
-        printf("Not Palindrome");
+    printf("Using Double Pointer = %d", **dptr);
 }
 
 /*
 OUTPUT:
-Enter String: MADAM
-Palindrome String
+Using Pointer = 99
+Using Double Pointer = 99
 */

@@ -1,8 +1,8 @@
 /*
 ===========================================
 Question 02:
-Write a C program to copy one string
-to another manually without strcpy().
+Write a C program to store
+pointer address in double pointer.
 ===========================================
 */
 
@@ -10,25 +10,20 @@ to another manually without strcpy().
 
 void main()
 {
-    char source[100], destination[100];
-    int i = 0;
+    // Integer variable
+    int num = 25;
 
-    printf("Enter String: ");
-    gets(source);
+    // Pointer declaration
+    int *ptr = &num;
 
-    while(source[i] != '\0')
-    {
-        destination[i] = source[i];
-        i++;
-    }
+    // Double pointer
+    int **dptr = &ptr;
 
-    destination[i] = '\0';
-
-    printf("Copied String = %s", destination);
+    // Display address
+    printf("Pointer Address = %u", dptr);
 }
 
 /*
 OUTPUT:
-Enter String: PROGRAM
-Copied String = PROGRAM
+Pointer Address = 6422290
 */

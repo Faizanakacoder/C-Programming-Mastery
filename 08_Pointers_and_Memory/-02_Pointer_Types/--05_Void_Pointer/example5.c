@@ -1,8 +1,8 @@
 /*
 ===========================================
 Question 05:
-Write a C program to reverse a string
-manually without strrev().
+Write a C program demonstrating
+typecasting of void pointer.
 ===========================================
 */
 
@@ -10,28 +10,17 @@ manually without strrev().
 
 void main()
 {
-    char str[100];
-    int i = 0, length = 0;
+    // Integer variable
+    int num = 500;
 
-    printf("Enter String: ");
-    gets(str);
+    // Void pointer declaration
+    void *ptr = &num;
 
-    while(str[i] != '\0')
-    {
-        length++;
-        i++;
-    }
-
-    printf("Reversed String = ");
-
-    for(i = length - 1; i >= 0; i--)
-    {
-        printf("%c", str[i]);
-    }
+    // Typecasting and display
+    printf("Value = %d", *(int *)ptr);
 }
 
 /*
 OUTPUT:
-Enter String: HELLO
-Reversed String = OLLEH
+Value = 500
 */
