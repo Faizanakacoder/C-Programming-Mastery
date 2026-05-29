@@ -1,8 +1,8 @@
 /*
 ===========================================
 Question 05:
-Write a C program to reverse a string
-manually without strrev().
+Write a C program to modify
+float value using pointer.
 ===========================================
 */
 
@@ -10,28 +10,20 @@ manually without strrev().
 
 void main()
 {
-    char str[100];
-    int i = 0, length = 0;
+    // Float variable
+    float num = 10.5;
 
-    printf("Enter String: ");
-    gets(str);
+    // Pointer declaration
+    float *ptr = &num;
 
-    while(str[i] != '\0')
-    {
-        length++;
-        i++;
-    }
+    // Modify value
+    *ptr = 88.8;
 
-    printf("Reversed String = ");
-
-    for(i = length - 1; i >= 0; i--)
-    {
-        printf("%c", str[i]);
-    }
+    // Display modified value
+    printf("Modified Value = %.2f", num);
 }
 
 /*
 OUTPUT:
-Enter String: HELLO
-Reversed String = OLLEH
+Modified Value = 88.80
 */

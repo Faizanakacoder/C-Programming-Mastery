@@ -1,40 +1,29 @@
 /*
 ===========================================
 Question 10:
-Write a C program to find frequency
-of a character manually in a string.
+Write a C program using
+float pointer with function.
 ===========================================
 */
 
 #include<stdio.h>
 
+void display(float *ptr)
+{
+    // Display float value
+    printf("Value = %.2f", *ptr);
+}
+
 void main()
 {
-    char str[100], ch;
-    int i = 0, count = 0;
+    // Float variable
+    float num = 500.5;
 
-    printf("Enter String: ");
-    gets(str);
-
-    printf("Enter Character: ");
-    scanf("%c", &ch);
-
-    while(str[i] != '\0')
-    {
-        if(str[i] == ch)
-        {
-            count++;
-        }
-
-        i++;
-    }
-
-    printf("Frequency of %c = %d", ch, count);
+    // Function call
+    display(&num);
 }
 
 /*
 OUTPUT:
-Enter String: HELLO
-Enter Character: L
-Frequency of L = 2
+Value = 500.50
 */

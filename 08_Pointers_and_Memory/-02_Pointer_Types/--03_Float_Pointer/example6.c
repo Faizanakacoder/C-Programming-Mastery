@@ -1,8 +1,8 @@
 /*
 ===========================================
 Question 06:
-Write a C program to check whether
-a string is palindrome or not manually.
+Write a C program demonstrating
+float pointer arithmetic.
 ===========================================
 */
 
@@ -10,34 +10,24 @@ a string is palindrome or not manually.
 
 void main()
 {
-    char str[100];
-    int i, length = 0, flag = 1;
+    // Float array
+    float arr[3] = {1.1,2.2,3.3};
 
-    printf("Enter String: ");
-    gets(str);
+    // Pointer declaration
+    float *ptr = arr;
 
-    while(str[length] != '\0')
-    {
-        length++;
-    }
+    // Display first value
+    printf("First = %.1f\n", *ptr);
 
-    for(i = 0; i < length / 2; i++)
-    {
-        if(str[i] != str[length - i - 1])
-        {
-            flag = 0;
-            break;
-        }
-    }
+    // Increment pointer
+    ptr++;
 
-    if(flag == 1)
-        printf("Palindrome String");
-    else
-        printf("Not Palindrome");
+    // Display second value
+    printf("Second = %.1f", *ptr);
 }
 
 /*
 OUTPUT:
-Enter String: MADAM
-Palindrome String
+First = 1.1
+Second = 2.2
 */

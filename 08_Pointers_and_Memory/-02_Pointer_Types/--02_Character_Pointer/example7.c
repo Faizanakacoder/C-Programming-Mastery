@@ -1,8 +1,8 @@
 /*
 ===========================================
 Question 07:
-Write a C program to count vowels
-manually in a string.
+Write a C program using
+character pointer with string.
 ===========================================
 */
 
@@ -10,30 +10,17 @@ manually in a string.
 
 void main()
 {
-    char str[100];
-    int i = 0, vowels = 0;
+    // String declaration
+    char str[] = "HELLO";
 
-    printf("Enter String: ");
-    gets(str);
+    // Pointer declaration
+    char *ptr = str;
 
-    while(str[i] != '\0')
-    {
-        if(str[i]=='A'||str[i]=='E'||str[i]=='I'||
-           str[i]=='O'||str[i]=='U'||str[i]=='a'||
-           str[i]=='e'||str[i]=='i'||str[i]=='o'||
-           str[i]=='u')
-        {
-            vowels++;
-        }
-
-        i++;
-    }
-
-    printf("Total Vowels = %d", vowels);
+    // Display string
+    printf("String = %s", ptr);
 }
 
 /*
 OUTPUT:
-Enter String: HELLO
-Total Vowels = 2
+String = HELLO
 */

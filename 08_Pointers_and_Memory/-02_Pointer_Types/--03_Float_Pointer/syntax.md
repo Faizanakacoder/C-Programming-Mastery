@@ -1,130 +1,112 @@
-# 📘 Manual String Implementations - Syntax
+# 📘 Float Pointer - Syntax
 
 ---
 
-# 📌 Manual String Length
+# 📌 Float Pointer Declaration
 
-while(str[i] != '\0')
-{
-count++;
-i++;
-}
+float *ptr;
 
 ---
 
-# 📌 Manual String Copy
+# 📌 Float Pointer Initialization
 
-while(source[i] != '\0')
-{
-destination[i] = source[i];
-i++;
-}
+float num = 10.5;
 
-destination[i] = '\0';
+float *ptr = #
 
 ---
 
-# 📌 Manual String Concatenation
+# 📌 Access Float Value
 
-while(str1[i] != '\0')
-{
-i++;
-}
-
-while(str2[j] != '\0')
-{
-str1[i] = str2[j];
-
-```
-i++;
-j++;
-```
-
-}
-
-str1[i] = '\0';
+printf("%.2f", *ptr);
 
 ---
 
-# 📌 Manual String Comparison
+# 📌 Display Address
 
-while(str1[i] == str2[i])
-{
-i++;
-}
+printf("%u", ptr);
 
 ---
 
-# 📌 Manual Reverse
+# 📌 Modify Float Value
 
-for(i = length - 1; i >= 0; i--)
-{
-printf("%c", str[i]);
-}
+*ptr = 50.5;
 
 ---
 
-# 📌 Palindrome Check
+# 📌 Float Pointer Arithmetic
 
-if(str[i] != str[j])
-{
-flag = 0;
-}
+ptr++;
 
----
-
-# 📌 Uppercase Conversion
-
-if(str[i] >= 'a' && str[i] <= 'z')
-{
-str[i] = str[i] - 32;
-}
+ptr--;
 
 ---
 
-# 📌 Lowercase Conversion
+# 📌 Float Pointer with Array
 
-if(str[i] >= 'A' && str[i] <= 'Z')
+float arr[3] = {1.1,2.2,3.3};
+
+float *ptr = arr;
+
+---
+
+# 📌 Float Pointer with Function
+
+void display(float *ptr)
 {
-str[i] = str[i] + 32;
+printf("%.2f", *ptr);
 }
 
 ---
 
 # 📌 Important Rules
 
-✅ Strings end with '\0'
-✅ Use correct indexing
-✅ Stop traversal properly
-✅ Handle memory carefully
+✅ Use `%f` or `%.2f` for float
+✅ Initialize pointer properly
+✅ Use dereference operator carefully
 
 ---
 
 # ⚠️ Common Mistakes
 
-❌ Missing null character
-❌ Infinite loops
-❌ Wrong array indexing
-❌ Incorrect loop condition
+❌ Using `%d` for float
+❌ Dereferencing invalid pointer
+❌ Uninitialized pointer usage
 
 ---
 
-# 🚀 Quick Revision
+# 📌 Quick Revision Table
 
-| Operation | Logic              |
-| --------- | ------------------ |
-| strlen    | Count characters   |
-| strcpy    | Copy characters    |
-| strcat    | Append strings     |
-| strcmp    | Compare characters |
+| Syntax     | Meaning          |
+| ---------- | ---------------- |
+| float *ptr | Float pointer    |
+| &num       | Address of float |
+| *ptr       | Value at address |
+
+---
+
+# 📌 Example Syntax
+
+#include<stdio.h>
+
+void main()
+{
+float num = 10.5;
+
+```
+float *ptr = &num;
+
+printf("%.2f", *ptr);
+```
+
+}
 
 ---
 
 # 🎯 Summary
 
-Manual implementations improve:
+Float Pointer syntax helps:
 
-* logic
-* memory understanding
-* placement preparation
-* professional coding skills
+* access decimal values
+* perform scientific calculations
+* handle memory efficiently

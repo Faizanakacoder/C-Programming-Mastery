@@ -1,8 +1,8 @@
 /*
 ===========================================
 Question 08:
-Write a C program to convert string
-into uppercase manually.
+Write a C program to traverse
+string using character pointer.
 ===========================================
 */
 
@@ -10,27 +10,26 @@ into uppercase manually.
 
 void main()
 {
-    char str[100];
-    int i = 0;
+    // String declaration
+    char str[] = "WORLD";
 
-    printf("Enter String: ");
-    gets(str);
+    // Pointer declaration
+    char *ptr = str;
 
-    while(str[i] != '\0')
+    // Traverse string
+    while(*ptr != '\0')
     {
-        if(str[i] >= 'a' && str[i] <= 'z')
-        {
-            str[i] = str[i] - 32;
-        }
+        printf("%c\n", *ptr);
 
-        i++;
+        ptr++;
     }
-
-    printf("Uppercase String = %s", str);
 }
 
 /*
 OUTPUT:
-Enter String: hello
-Uppercase String = HELLO
+W
+O
+R
+L
+D
 */
