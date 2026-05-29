@@ -1,29 +1,40 @@
 /*
 ===========================================
 Question 02:
-Write a C program to find sum using pointer.
+Write a C program to check palindrome string.
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
 void main()
 {
-    int arr[5], i, sum = 0;
-    int *p = arr;
+    char str[100];
+    int i, length, flag = 1;
 
-    printf("Enter 5 elements:\n");
+    printf("Enter String: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    length = strlen(str);
 
-    for(i = 0; i < 5; i++)
-        sum += *(p + i);
+    for(i = 0; i < length/2; i++)
+    {
+        if(str[i] != str[length-1-i])
+        {
+            flag = 0;
+            break;
+        }
+    }
 
-    printf("Sum = %d", sum);
+    if(flag == 1)
+        printf("Palindrome String");
+    else
+        printf("Not Palindrome");
 }
 
 /*
 OUTPUT:
-Sum = 15
+Enter String: MADAM
+Palindrome String
 */

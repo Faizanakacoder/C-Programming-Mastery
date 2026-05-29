@@ -1,76 +1,164 @@
-# 📘 Array with Pointers - Theory
+# 📄 theory.md
+
+# 📘 String Manipulation Programs - Theory
 
 ---
 
-## 📌 What is Array with Pointer?
+# 📌 What is String Manipulation?
 
-An array name acts as a pointer to the first element.
+String manipulation means:
+modifying or processing strings according to program logic.
+
+Examples:
+
+* reversing strings
+* changing case
+* removing spaces
+* counting words
+* replacing characters
+
+---
+
+# 📌 Why String Manipulation is Important?
+
+Real-world applications constantly process text.
+
+Examples:
+
+* passwords
+* messages
+* search queries
+* user forms
+
+Almost every software system uses string manipulation.
+
+---
+
+# 📌 String Reversal
+
+Reversal means:
+displaying string from last character to first.
 
 Example:
-int arr[5];
-arr == &arr[0]
+
+HELLO → OLLEH
 
 ---
 
-## 🧠 Pointer Arithmetic
+# 📌 Palindrome String
 
-If:
-p = arr;
+Palindrome:
+same forward and backward.
 
-Then:
-p + 1 → next element
-p + 2 → third element
+Examples:
 
----
-
-## ⚙️ Memory Concept
-
-arr[0] → *p  
-arr[1] → *(p+1)  
-arr[2] → *(p+2)
+* MADAM
+* NITIN
 
 ---
 
-## 📊 How It Works
+# 📌 Vowel and Consonant Counting
 
-- Array stored in continuous memory
-- Pointer moves step-by-step
-- Each step depends on data type size
+Vowels:
+A E I O U
 
----
-
-## 🌍 Real Life Example
-
-- Row of seats in cinema
-- Pointer = moving seat number
-- Array = full row
+All other alphabets:
+consonants
 
 ---
 
-## 📌 Advantages
+# 📌 Case Conversion
 
-✔ Fast access  
-✔ Efficient memory usage  
-✔ Core of data structures  
+Uppercase → Lowercase
+Lowercase → Uppercase
 
----
-
-## ❌ Disadvantages
-
-❌ Easy to misuse pointers  
-❌ Can cause segmentation faults  
+ASCII conversion is used.
 
 ---
 
-## 🎯 Interview Questions
+# 📌 Word Counting
 
-- Difference between array and pointer?
-- What is pointer arithmetic?
-- Why array name is pointer?
-- Can pointer modify array?
+Words are separated by:
+spaces
+
+Logic:
+count spaces + 1
 
 ---
 
-## 🚀 Conclusion
+# 📌 Removing Spaces
 
-Array with pointers is **foundation of memory-level programming in C**.
+Spaces are skipped while copying characters.
+
+---
+
+# 📌 Duplicate Character Removal
+
+Repeated characters are removed.
+
+Example:
+
+HELLO → HELO
+
+---
+
+# 📌 Character Frequency
+
+Counts how many times a character appears.
+
+---
+
+# 🌍 Real Life Analogy
+
+Think of strings like:
+editable text in a document.
+
+Manipulation means:
+editing that text.
+
+---
+
+# 📌 Advantages
+
+✅ Better problem solving
+✅ Real-world application understanding
+✅ Strong logic building
+✅ Interview preparation
+
+---
+
+# ❌ Disadvantages
+
+❌ Complex logic for beginners
+❌ High chance of indexing errors
+❌ Requires careful traversal
+
+---
+
+# 🧪 Dry Run Example
+
+Input:
+HELLO
+
+Reverse Traversal:
+
+O → L → L → E → H
+
+Output:
+OLLEH
+
+---
+
+# 🎯 Viva Questions
+
+1. What is string manipulation?
+2. What is palindrome?
+3. How are words counted?
+4. Why traversal is important?
+5. What is ASCII conversion?
+
+---
+
+# 🚀 Conclusion
+
+String manipulation is one of the most practical and important topics in C programming and software development.

@@ -1,46 +1,104 @@
-# 📘 Array with Pointers - Syntax
+# 📄 syntax.md
+
+# 📘 String Library Functions - Syntax
 
 ---
 
-## 📌 Pointer Declaration
+# 📌 Header File
 
-int *p;
-
----
-
-## 📌 Assign Array Address
-
-p = arr;
-
-OR
-
-p = &arr[0];
+#include<string.h>
 
 ---
 
-## 📌 Access Elements
+# 📌 strlen()
 
-*(p + i)
-
----
-
-## 📌 Loop Traversal
-
-for(i = 0; i < size; i++)
-{
-    printf("%d", *(p + i));
-}
+length = strlen(str);
 
 ---
 
-## 📌 Key Rules
+# 📌 strcpy()
 
-- Array name is pointer
-- Pointer moves in memory blocks
-- Must match data type size
+strcpy(destination, source);
 
 ---
 
-## 🚀 Summary
+# 📌 strcat()
 
-Pointer + array = **direct memory access system**
+strcat(str1, str2);
+
+---
+
+# 📌 strcmp()
+
+strcmp(str1, str2);
+
+---
+
+# 📌 strrev()
+
+strrev(str);
+
+---
+
+# 📌 strupr()
+
+strupr(str);
+
+---
+
+# 📌 strlwr()
+
+strlwr(str);
+
+---
+
+# 📌 strchr()
+
+strchr(str, ch);
+
+---
+
+# 📌 strstr()
+
+strstr(str1, str2);
+
+---
+
+# 📌 Important Rules
+
+✅ Include `<string.h>`
+✅ Destination array must have enough size
+✅ strcmp() returns integer
+✅ strcat() modifies first string
+
+---
+
+# ⚠️ Common Mistakes
+
+❌ Using == for comparison
+❌ Small destination array
+❌ Missing header file
+❌ Invalid string sizes
+
+---
+
+# 🚀 Quick Revision
+
+| Function | Use     |
+| -------- | ------- |
+| strlen() | Length  |
+| strcpy() | Copy    |
+| strcat() | Join    |
+| strcmp() | Compare |
+| strrev() | Reverse |
+
+---
+
+# 🎯 Summary
+
+String library functions are used for:
+
+* manipulation
+* searching
+* comparison
+* efficient string handling

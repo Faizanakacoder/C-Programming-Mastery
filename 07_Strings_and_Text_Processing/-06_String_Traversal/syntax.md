@@ -1,46 +1,104 @@
-# 📘 Array with Pointers - Syntax
+# 📄 syntax.md
+
+# 📘 String Traversal - Syntax
 
 ---
 
-## 📌 Pointer Declaration
+# 📌 Forward Traversal using while Loop
 
-int *p;
+int i = 0;
 
----
-
-## 📌 Assign Array Address
-
-p = arr;
-
-OR
-
-p = &arr[0];
-
----
-
-## 📌 Access Elements
-
-*(p + i)
-
----
-
-## 📌 Loop Traversal
-
-for(i = 0; i < size; i++)
+while(str[i] != '\0')
 {
-    printf("%d", *(p + i));
+printf("%c", str[i]);
+i++;
 }
 
 ---
 
-## 📌 Key Rules
+# 📌 Forward Traversal using for Loop
 
-- Array name is pointer
-- Pointer moves in memory blocks
-- Must match data type size
+for(i = 0; str[i] != '\0'; i++)
+{
+printf("%c", str[i]);
+}
 
 ---
 
-## 🚀 Summary
+# 📌 Backward Traversal
 
-Pointer + array = **direct memory access system**
+for(i = length-1; i >= 0; i--)
+{
+printf("%c", str[i]);
+}
+
+---
+
+# 📌 Count Characters
+
+count = 0;
+
+while(str[i] != '\0')
+{
+count++;
+i++;
+}
+
+---
+
+# 📌 Pointer-Based Traversal
+
+while(*ptr != '\0')
+{
+printf("%c", *ptr);
+ptr++;
+}
+
+---
+
+# 📌 Alternate Character Traversal
+
+for(i = 0; str[i] != '\0'; i = i + 2)
+{
+printf("%c", str[i]);
+}
+
+---
+
+# 📌 Important Rules
+
+✅ Stop traversal at '\0'
+✅ Use proper indexing
+✅ Increment properly
+✅ Avoid out-of-bound access
+
+---
+
+# ⚠️ Common Mistakes
+
+❌ Infinite loop
+❌ Missing increment
+❌ Wrong condition
+❌ Access after '\0'
+
+---
+
+# 🚀 Quick Revision
+
+| Traversal Type    | Direction     |
+| ----------------- | ------------- |
+| Forward           | Left to Right |
+| Backward          | Right to Left |
+| Pointer Traversal | Memory-based  |
+
+---
+
+# 🎯 Summary
+
+Traversal is used for:
+
+* reading characters
+* processing strings
+* searching
+* counting
+* manipulation

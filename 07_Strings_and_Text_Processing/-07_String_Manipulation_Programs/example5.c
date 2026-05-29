@@ -1,7 +1,7 @@
 /*
 ===========================================
 Question 05:
-Write a C program to reverse array using pointer.
+Write a C program to convert string into lowercase.
 ===========================================
 */
 
@@ -9,19 +9,27 @@ Write a C program to reverse array using pointer.
 
 void main()
 {
-    int arr[5], i;
-    int *p = arr;
+    char str[100];
+    int i = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    printf("Reverse:\n");
+    while(str[i] != '\0')
+    {
+        if(str[i] >= 'A' && str[i] <= 'Z')
+        {
+            str[i] = str[i] + 32;
+        }
 
-    for(i = 4; i >= 0; i--)
-        printf("%d ", *(p + i));
+        i++;
+    }
+
+    printf("Lowercase String = %s", str);
 }
 
 /*
 OUTPUT:
-5 4 3 2 1
+Enter String: HELLO
+Lowercase String = hello
 */

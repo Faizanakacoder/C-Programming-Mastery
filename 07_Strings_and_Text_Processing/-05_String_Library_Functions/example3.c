@@ -1,30 +1,32 @@
 /*
 ===========================================
 Question 03:
-Write a C program to find max using pointer.
+Write a C program to concatenate two strings
+using strcat().
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
 void main()
 {
-    int arr[5], i, max;
-    int *p = arr;
+    char str1[100], str2[100];
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter First String: ");
+    gets(str1);
 
-    max = *p;
+    printf("Enter Second String: ");
+    gets(str2);
 
-    for(i = 1; i < 5; i++)
-        if(*(p + i) > max)
-            max = *(p + i);
+    strcat(str1, str2);
 
-    printf("Max = %d", max);
+    printf("Concatenated String = %s", str1);
 }
 
 /*
 OUTPUT:
-Max = 50
+Enter First String: HELLO
+Enter Second String: WORLD
+Concatenated String = HELLOWORLD
 */

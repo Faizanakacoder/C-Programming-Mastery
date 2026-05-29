@@ -1,7 +1,7 @@
 /*
 ===========================================
 Question 03:
-Write a C program to find max using pointer.
+Write a C program to print string character-by-character.
 ===========================================
 */
 
@@ -9,22 +9,25 @@ Write a C program to find max using pointer.
 
 void main()
 {
-    int arr[5], i, max;
-    int *p = arr;
+    char str[100];
+    int i;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    max = *p;
-
-    for(i = 1; i < 5; i++)
-        if(*(p + i) > max)
-            max = *(p + i);
-
-    printf("Max = %d", max);
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        printf("\nCharacter = %c", str[i]);
+    }
 }
 
 /*
 OUTPUT:
-Max = 50
+Enter String: HELLO
+
+Character = H
+Character = E
+Character = L
+Character = L
+Character = O
 */

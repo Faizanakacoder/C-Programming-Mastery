@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 09:
-Write a C program for pointer traversal of array.
+Write a C program to convert uppercase string
+to lowercase without library function.
 ===========================================
 */
 
@@ -9,17 +10,27 @@ Write a C program for pointer traversal of array.
 
 void main()
 {
-    int arr[5], i;
-    int *p = arr;
+    char str[100];
+    int i = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
-        printf("Address: %u Value: %d\n", (p + i), *(p + i));
+    while(str[i] != '\0')
+    {
+        if(str[i] >= 'A' && str[i] <= 'Z')
+        {
+            str[i] = str[i] + 32;
+        }
+
+        i++;
+    }
+
+    printf("Lowercase String = %s", str);
 }
 
 /*
 OUTPUT:
-Address: ... Value: 10
+Enter String: HELLO
+Lowercase String = hello
 */

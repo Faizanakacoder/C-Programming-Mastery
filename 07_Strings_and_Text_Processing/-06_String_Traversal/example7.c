@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 07:
-Write a C program to sort array using pointer.
+Write a C program for string traversal
+using while loop.
 ===========================================
 */
 
@@ -9,30 +10,25 @@ Write a C program to sort array using pointer.
 
 void main()
 {
-    int arr[5], i, j, temp;
-    int *p = arr;
+    char str[100];
+    int i = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
+    while(str[i] != '\0')
     {
-        for(j = i + 1; j < 5; j++)
-        {
-            if(*(p + i) > *(p + j))
-            {
-                temp = *(p + i);
-                *(p + i) = *(p + j);
-                *(p + j) = temp;
-            }
-        }
+        printf("%c\n", str[i]);
+        i++;
     }
-
-    for(i = 0; i < 5; i++)
-        printf("%d ", *(p + i));
 }
 
 /*
 OUTPUT:
-1 2 3 4 5
+Enter String: WORLD
+W
+O
+R
+L
+D
 */

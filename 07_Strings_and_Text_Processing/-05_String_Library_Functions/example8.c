@@ -1,33 +1,33 @@
 /*
 ===========================================
 Question 08:
-Write a C program to count even and odd using pointer.
+Write a C program to search character
+using strchr().
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
 void main()
 {
-    int arr[5], i, even = 0, odd = 0;
-    int *p = arr;
+    char str[100], ch;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
-    {
-        if(*(p + i) % 2 == 0)
-            even++;
-        else
-            odd++;
-    }
+    printf("Enter Character: ");
+    scanf("%c", &ch);
 
-    printf("Even = %d\nOdd = %d", even, odd);
+    if(strchr(str, ch) != NULL)
+        printf("Character Found");
+    else
+        printf("Character Not Found");
 }
 
 /*
 OUTPUT:
-Even = 3
-Odd = 2
+Enter String: HELLO
+Enter Character: E
+Character Found
 */

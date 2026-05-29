@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 01:
-Write a C program to display array using pointer.
+Write a C program to find length of string
+without using library function.
 ===========================================
 */
 
@@ -9,24 +10,23 @@ Write a C program to display array using pointer.
 
 void main()
 {
-    int arr[5], i;
-    int *p;
+    char str[100];
+    int i = 0, count = 0;
 
-    p = arr;
+    printf("Enter String: ");
+    gets(str);
 
-    printf("Enter 5 elements:\n");
+    while(str[i] != '\0')
+    {
+        count++;
+        i++;
+    }
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
-
-    printf("Array Elements:\n");
-
-    for(i = 0; i < 5; i++)
-        printf("%d ", *(p + i));
+    printf("Length = %d", count);
 }
 
 /*
 OUTPUT:
-1 2 3 4 5
-1 2 3 4 5
+Enter String: HELLO
+Length = 5
 */

@@ -1,35 +1,28 @@
 /*
 ===========================================
 Question 06:
-Write a C program to search element using pointer.
+Write a C program to convert string into uppercase
+using strupr().
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
 void main()
 {
-    int arr[5], i, key, flag = 0;
-    int *p = arr;
+    char str[100];
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    scanf("%d", &key);
+    strupr(str);
 
-    for(i = 0; i < 5; i++)
-    {
-        if(*(p + i) == key)
-            flag = 1;
-    }
-
-    if(flag)
-        printf("Found");
-    else
-        printf("Not Found");
+    printf("Uppercase String = %s", str);
 }
 
 /*
 OUTPUT:
-Found
+Enter String: hello
+Uppercase String = HELLO
 */

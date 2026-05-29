@@ -1,46 +1,170 @@
-# 📘 Array with Pointers - Syntax
+# 📘 String and Text Processing - Syntax
 
 ---
 
-## 📌 Pointer Declaration
+# 📌 Header File
 
-int *p;
-
----
-
-## 📌 Assign Array Address
-
-p = arr;
-
-OR
-
-p = &arr[0];
+#include<stdio.h>
+#include<string.h>
 
 ---
 
-## 📌 Access Elements
+# 📌 String Declaration
 
-*(p + i)
+char str[20];
 
 ---
 
-## 📌 Loop Traversal
+# 📌 String Initialization
 
-for(i = 0; i < size; i++)
+char str[] = "Hello";
+
+---
+
+# 📌 Character Initialization
+
+char ch = 'A';
+
+---
+
+# 📌 String Input using scanf()
+
+scanf("%s", str);
+
+---
+
+# 📌 String Input using gets()
+
+gets(str);
+
+---
+
+# 📌 String Output using printf()
+
+printf("%s", str);
+
+---
+
+# 📌 String Output using puts()
+
+puts(str);
+
+---
+
+# 📌 String Traversal
+
+int i = 0;
+
+while(str[i] != '\0')
 {
-    printf("%d", *(p + i));
+printf("%c", str[i]);
+i++;
 }
 
 ---
 
-## 📌 Key Rules
+# 📌 String Length
 
-- Array name is pointer
-- Pointer moves in memory blocks
-- Must match data type size
+strlen(str);
 
 ---
 
-## 🚀 Summary
+# 📌 String Copy
 
-Pointer + array = **direct memory access system**
+strcpy(destination, source);
+
+---
+
+# 📌 String Concatenation
+
+strcat(str1, str2);
+
+---
+
+# 📌 String Comparison
+
+strcmp(str1, str2);
+
+---
+
+# 📌 Reverse Traversal
+
+for(i = strlen(str)-1; i >= 0; i--)
+{
+printf("%c", str[i]);
+}
+
+---
+
+# 📌 Array of Strings
+
+char names[5][20];
+
+---
+
+# 📌 String Pointer
+
+char *ptr;
+
+ptr = str;
+
+---
+
+# 📌 Command Line Arguments
+
+void main(int argc, char *argv[])
+{
+printf("%s", argv[1]);
+}
+
+---
+
+# 📌 Important Escape Sequences
+
+| Escape Sequence | Meaning        |
+| --------------- | -------------- |
+| \n              | New Line       |
+| \t              | Tab            |
+| \0              | Null Character |
+| \               | Backslash      |
+| "               | Double Quote   |
+
+---
+
+# 📌 Important Rules
+
+✅ Strings end with '\0'
+✅ Use character array for strings
+✅ Include `<string.h>` for library functions
+✅ Use `%s` for string input/output
+
+---
+
+# ⚠️ Common Mistakes
+
+❌ Using == for comparison
+❌ Forgetting null character
+❌ Buffer overflow
+❌ Using wrong format specifier
+
+---
+
+# 🚀 Quick Revision
+
+| Operation   | Function |
+| ----------- | -------- |
+| Length      | strlen() |
+| Copy        | strcpy() |
+| Compare     | strcmp() |
+| Concatenate | strcat() |
+
+---
+
+# 🎯 Summary
+
+Strings in C are character arrays used for:
+
+* text handling
+* manipulation
+* processing
+* real-world applications

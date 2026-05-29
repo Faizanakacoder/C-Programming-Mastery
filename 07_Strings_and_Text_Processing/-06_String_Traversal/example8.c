@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 08:
-Write a C program to count even and odd using pointer.
+Write a C program for string traversal
+using for loop.
 ===========================================
 */
 
@@ -9,25 +10,20 @@ Write a C program to count even and odd using pointer.
 
 void main()
 {
-    int arr[5], i, even = 0, odd = 0;
-    int *p = arr;
+    char str[100];
+    int i;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
+    for(i = 0; str[i] != '\0'; i++)
     {
-        if(*(p + i) % 2 == 0)
-            even++;
-        else
-            odd++;
+        printf("%c ", str[i]);
     }
-
-    printf("Even = %d\nOdd = %d", even, odd);
 }
 
 /*
 OUTPUT:
-Even = 3
-Odd = 2
+Enter String: PROGRAM
+P R O G R A M
 */

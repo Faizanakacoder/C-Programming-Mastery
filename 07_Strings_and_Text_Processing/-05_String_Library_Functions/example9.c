@@ -1,25 +1,33 @@
 /*
 ===========================================
 Question 09:
-Write a C program for pointer traversal of array.
+Write a C program to search substring
+using strstr().
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
 void main()
 {
-    int arr[5], i;
-    int *p = arr;
+    char str1[100], str2[100];
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter Main String: ");
+    gets(str1);
 
-    for(i = 0; i < 5; i++)
-        printf("Address: %u Value: %d\n", (p + i), *(p + i));
+    printf("Enter Substring: ");
+    gets(str2);
+
+    if(strstr(str1, str2) != NULL)
+        printf("Substring Found");
+    else
+        printf("Substring Not Found");
 }
 
 /*
 OUTPUT:
-Address: ... Value: 10
+Enter Main String: HELLO WORLD
+Enter Substring: WORLD
+Substring Found
 */

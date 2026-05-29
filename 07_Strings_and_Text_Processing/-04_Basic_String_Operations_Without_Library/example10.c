@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 10:
-Write a C program to demonstrate array addresses using pointer.
+Write a C program to find frequency of a character
+in string without library function.
 ===========================================
 */
 
@@ -9,17 +10,31 @@ Write a C program to demonstrate array addresses using pointer.
 
 void main()
 {
-    int arr[5], i;
-    int *p = arr;
+    char str[100], ch;
+    int i = 0, count = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
-        printf("arr[%d] Address = %u\n", i, (p + i));
+    printf("Enter Character: ");
+    scanf("%c", &ch);
+
+    while(str[i] != '\0')
+    {
+        if(str[i] == ch)
+        {
+            count++;
+        }
+
+        i++;
+    }
+
+    printf("Frequency = %d", count);
 }
 
 /*
 OUTPUT:
-Addresses of array elements
+Enter String: HELLO
+Enter Character: L
+Frequency = 2
 */

@@ -1,76 +1,172 @@
-# 📘 Array with Pointers - Theory
+# 📄 theory.md
+
+# 📘 Basic String Operations Without Library - Theory
 
 ---
 
-## 📌 What is Array with Pointer?
+# 📌 What are Manual String Operations?
 
-An array name acts as a pointer to the first element.
+Manual string operations mean:
+performing string tasks without using predefined library functions.
+
+Instead of:
+
+* strlen()
+* strcpy()
+* strcat()
+
+we use:
+
+* loops
+* conditions
+* character traversal
+
+---
+
+# 📌 Why Learn Manual Operations?
+
+Manual operations help understand:
+
+* internal string working
+* memory handling
+* traversal logic
+* algorithm building
+
+Interviewers often ask:
+“Do this without library functions.”
+
+---
+
+# 📌 String Traversal
+
+Traversal means:
+accessing characters one-by-one.
 
 Example:
-int arr[5];
-arr == &arr[0]
+
+HELLO
+
+Traversal:
+
+H → E → L → L → O → \0
 
 ---
 
-## 🧠 Pointer Arithmetic
+# 📌 Manual String Length
 
-If:
-p = arr;
+Logic:
 
-Then:
-p + 1 → next element
-p + 2 → third element
+* count characters until '\0'
 
 ---
 
-## ⚙️ Memory Concept
+# 📌 Manual String Copy
 
-arr[0] → *p  
-arr[1] → *(p+1)  
-arr[2] → *(p+2)
+Logic:
 
----
-
-## 📊 How It Works
-
-- Array stored in continuous memory
-- Pointer moves step-by-step
-- Each step depends on data type size
+* copy character one-by-one
+* stop at '\0'
 
 ---
 
-## 🌍 Real Life Example
+# 📌 Manual Concatenation
 
-- Row of seats in cinema
-- Pointer = moving seat number
-- Array = full row
+Logic:
 
----
-
-## 📌 Advantages
-
-✔ Fast access  
-✔ Efficient memory usage  
-✔ Core of data structures  
+1. Find first string end
+2. Add second string characters
+3. Add '\0'
 
 ---
 
-## ❌ Disadvantages
+# 📌 Manual Comparison
 
-❌ Easy to misuse pointers  
-❌ Can cause segmentation faults  
+Logic:
 
----
-
-## 🎯 Interview Questions
-
-- Difference between array and pointer?
-- What is pointer arithmetic?
-- Why array name is pointer?
-- Can pointer modify array?
+* compare characters one-by-one
 
 ---
 
-## 🚀 Conclusion
+# 📌 String Reversal
 
-Array with pointers is **foundation of memory-level programming in C**.
+Logic:
+
+* start from last index
+* print backwards
+
+---
+
+# 📌 Palindrome String
+
+Palindrome:
+same forward and backward
+
+Examples:
+
+* MADAM
+* NITIN
+
+---
+
+# 🌍 Real Life Analogy
+
+Think of strings like:
+a row of boxes containing characters.
+
+Manual operations mean:
+checking every box manually.
+
+---
+
+# 📌 Advantages
+
+✅ Better logic building
+✅ Strong interview preparation
+✅ Deep understanding
+✅ Better debugging skills
+
+---
+
+# ❌ Disadvantages
+
+❌ More code
+❌ Time-consuming
+❌ Higher chance of mistakes
+
+---
+
+# 🧪 Dry Run Example
+
+Input:
+HELLO
+
+Length Calculation:
+
+H → count=1
+E → count=2
+L → count=3
+L → count=4
+O → count=5
+
+Stop at '\0'
+
+---
+
+# 🎯 Viva Questions
+
+1. What is string traversal?
+2. Why use manual operations?
+3. How to calculate length manually?
+4. What is palindrome?
+5. Why '\0' is important?
+
+---
+
+# 🚀 Conclusion
+
+Manual string operations improve:
+
+* problem solving
+* traversal understanding
+* interview performance
+* logical thinking

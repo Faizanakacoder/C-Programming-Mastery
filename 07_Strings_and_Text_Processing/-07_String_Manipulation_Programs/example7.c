@@ -1,7 +1,7 @@
 /*
 ===========================================
 Question 07:
-Write a C program to sort array using pointer.
+Write a C program to remove spaces from string.
 ===========================================
 */
 
@@ -9,30 +9,30 @@ Write a C program to sort array using pointer.
 
 void main()
 {
-    int arr[5], i, j, temp;
-    int *p = arr;
+    char str[100], newstr[100];
+    int i = 0, j = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
+    while(str[i] != '\0')
     {
-        for(j = i + 1; j < 5; j++)
+        if(str[i] != ' ')
         {
-            if(*(p + i) > *(p + j))
-            {
-                temp = *(p + i);
-                *(p + i) = *(p + j);
-                *(p + j) = temp;
-            }
+            newstr[j] = str[i];
+            j++;
         }
+
+        i++;
     }
 
-    for(i = 0; i < 5; i++)
-        printf("%d ", *(p + i));
+    newstr[j] = '\0';
+
+    printf("String Without Spaces = %s", newstr);
 }
 
 /*
 OUTPUT:
-1 2 3 4 5
+Enter String: I LOVE C
+String Without Spaces = ILOVEC
 */

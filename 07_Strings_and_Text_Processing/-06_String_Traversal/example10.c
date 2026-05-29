@@ -1,7 +1,7 @@
 /*
 ===========================================
 Question 10:
-Write a C program to demonstrate array addresses using pointer.
+Write a C program for pointer-based string traversal.
 ===========================================
 */
 
@@ -9,17 +9,23 @@ Write a C program to demonstrate array addresses using pointer.
 
 void main()
 {
-    int arr[5], i;
-    int *p = arr;
+    char str[100];
+    char *ptr;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
-        printf("arr[%d] Address = %u\n", i, (p + i));
+    ptr = str;
+
+    while(*ptr != '\0')
+    {
+        printf("%c ", *ptr);
+        ptr++;
+    }
 }
 
 /*
 OUTPUT:
-Addresses of array elements
+Enter String: HELLO
+H E L L O
 */

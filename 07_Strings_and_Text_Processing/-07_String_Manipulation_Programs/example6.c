@@ -1,7 +1,7 @@
 /*
 ===========================================
 Question 06:
-Write a C program to search element using pointer.
+Write a C program to count total words in sentence.
 ===========================================
 */
 
@@ -9,27 +9,27 @@ Write a C program to search element using pointer.
 
 void main()
 {
-    int arr[5], i, key, flag = 0;
-    int *p = arr;
+    char str[100];
+    int i = 0, words = 1;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter Sentence: ");
+    gets(str);
 
-    scanf("%d", &key);
-
-    for(i = 0; i < 5; i++)
+    while(str[i] != '\0')
     {
-        if(*(p + i) == key)
-            flag = 1;
+        if(str[i] == ' ')
+        {
+            words++;
+        }
+
+        i++;
     }
 
-    if(flag)
-        printf("Found");
-    else
-        printf("Not Found");
+    printf("Total Words = %d", words);
 }
 
 /*
 OUTPUT:
-Found
+Enter Sentence: I LOVE C PROGRAMMING
+Total Words = 4
 */

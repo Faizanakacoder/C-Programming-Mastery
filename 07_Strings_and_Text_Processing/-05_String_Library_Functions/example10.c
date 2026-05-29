@@ -1,25 +1,33 @@
 /*
 ===========================================
 Question 10:
-Write a C program to demonstrate array addresses using pointer.
+Write a C program demonstrating multiple
+string library functions.
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
 void main()
 {
-    int arr[5], i;
-    int *p = arr;
+    char str1[100] = "HELLO";
+    char str2[100] = "WORLD";
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Length = %d\n", strlen(str1));
 
-    for(i = 0; i < 5; i++)
-        printf("arr[%d] Address = %u\n", i, (p + i));
+    strcat(str1, str2);
+
+    printf("Concatenated = %s\n", str1);
+
+    strrev(str1);
+
+    printf("Reversed = %s", str1);
 }
 
 /*
 OUTPUT:
-Addresses of array elements
+Length = 5
+Concatenated = HELLOWORLD
+Reversed = DLROWOLLEH
 */

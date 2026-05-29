@@ -1,7 +1,7 @@
 /*
 ===========================================
 Question 03:
-Write a C program to find max using pointer.
+Write a C program to count vowels and consonants.
 ===========================================
 */
 
@@ -9,22 +9,40 @@ Write a C program to find max using pointer.
 
 void main()
 {
-    int arr[5], i, max;
-    int *p = arr;
+    char str[100];
+    int i = 0, vowels = 0, consonants = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    max = *p;
+    while(str[i] != '\0')
+    {
+        if((str[i]>='A' && str[i]<='Z') ||
+           (str[i]>='a' && str[i]<='z'))
+        {
+            if(str[i]=='A'||str[i]=='E'||str[i]=='I'||
+               str[i]=='O'||str[i]=='U'||str[i]=='a'||
+               str[i]=='e'||str[i]=='i'||str[i]=='o'||
+               str[i]=='u')
+            {
+                vowels++;
+            }
+            else
+            {
+                consonants++;
+            }
+        }
 
-    for(i = 1; i < 5; i++)
-        if(*(p + i) > max)
-            max = *(p + i);
+        i++;
+    }
 
-    printf("Max = %d", max);
+    printf("Vowels = %d\n", vowels);
+    printf("Consonants = %d", consonants);
 }
 
 /*
 OUTPUT:
-Max = 50
+Enter String: HELLO
+Vowels = 2
+Consonants = 3
 */

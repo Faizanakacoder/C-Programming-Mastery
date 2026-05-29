@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 05:
-Write a C program to reverse array using pointer.
+Write a C program to reverse a string
+without using strrev().
 ===========================================
 */
 
@@ -9,19 +10,26 @@ Write a C program to reverse array using pointer.
 
 void main()
 {
-    int arr[5], i;
-    int *p = arr;
+    char str[100];
+    int i = 0, length = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    printf("Reverse:\n");
+    while(str[i] != '\0')
+    {
+        length++;
+        i++;
+    }
 
-    for(i = 4; i >= 0; i--)
-        printf("%d ", *(p + i));
+    for(i = length-1; i >= 0; i--)
+    {
+        printf("%c", str[i]);
+    }
 }
 
 /*
 OUTPUT:
-5 4 3 2 1
+Enter String: HELLO
+OLLEH
 */

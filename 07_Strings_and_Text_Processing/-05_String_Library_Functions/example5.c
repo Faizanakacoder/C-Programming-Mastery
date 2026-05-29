@@ -1,27 +1,28 @@
 /*
 ===========================================
 Question 05:
-Write a C program to reverse array using pointer.
+Write a C program to reverse string
+using strrev().
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
 void main()
 {
-    int arr[5], i;
-    int *p = arr;
+    char str[100];
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    printf("Reverse:\n");
+    strrev(str);
 
-    for(i = 4; i >= 0; i--)
-        printf("%d ", *(p + i));
+    printf("Reversed String = %s", str);
 }
 
 /*
 OUTPUT:
-5 4 3 2 1
+Enter String: HELLO
+Reversed String = OLLEH
 */

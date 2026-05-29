@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 04:
-Write a C program to find min using pointer.
+Write a C program to count total characters
+using traversal.
 ===========================================
 */
 
@@ -9,22 +10,23 @@ Write a C program to find min using pointer.
 
 void main()
 {
-    int arr[5], i, min;
-    int *p = arr;
+    char str[100];
+    int i = 0, count = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    min = *p;
+    while(str[i] != '\0')
+    {
+        count++;
+        i++;
+    }
 
-    for(i = 1; i < 5; i++)
-        if(*(p + i) < min)
-            min = *(p + i);
-
-    printf("Min = %d", min);
+    printf("Total Characters = %d", count);
 }
 
 /*
 OUTPUT:
-Min = 5
+Enter String: HELLO
+Total Characters = 5
 */

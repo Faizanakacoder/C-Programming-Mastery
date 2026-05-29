@@ -1,7 +1,7 @@
 /*
 ===========================================
 Question 08:
-Write a C program to count even and odd using pointer.
+Write a C program to count spaces in string.
 ===========================================
 */
 
@@ -9,25 +9,27 @@ Write a C program to count even and odd using pointer.
 
 void main()
 {
-    int arr[5], i, even = 0, odd = 0;
-    int *p = arr;
+    char str[100];
+    int i = 0, spaces = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter Sentence: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
+    while(str[i] != '\0')
     {
-        if(*(p + i) % 2 == 0)
-            even++;
-        else
-            odd++;
+        if(str[i] == ' ')
+        {
+            spaces++;
+        }
+
+        i++;
     }
 
-    printf("Even = %d\nOdd = %d", even, odd);
+    printf("Total Spaces = %d", spaces);
 }
 
 /*
 OUTPUT:
-Even = 3
-Odd = 2
+Enter Sentence: I LOVE C
+Total Spaces = 2
 */

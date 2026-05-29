@@ -1,29 +1,28 @@
 /*
 ===========================================
 Question 02:
-Write a C program to find sum using pointer.
+Write a C program to copy string
+using strcpy().
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
 void main()
 {
-    int arr[5], i, sum = 0;
-    int *p = arr;
+    char str1[100], str2[100];
 
-    printf("Enter 5 elements:\n");
+    printf("Enter String: ");
+    gets(str1);
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    strcpy(str2, str1);
 
-    for(i = 0; i < 5; i++)
-        sum += *(p + i);
-
-    printf("Sum = %d", sum);
+    printf("Copied String = %s", str2);
 }
 
 /*
 OUTPUT:
-Sum = 15
+Enter String: HELLO
+Copied String = HELLO
 */

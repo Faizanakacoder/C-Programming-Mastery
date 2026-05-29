@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 06:
-Write a C program to search element using pointer.
+Write a C program to count special characters
+using traversal.
 ===========================================
 */
 
@@ -9,27 +10,30 @@ Write a C program to search element using pointer.
 
 void main()
 {
-    int arr[5], i, key, flag = 0;
-    int *p = arr;
+    char str[100];
+    int i = 0, special = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    scanf("%d", &key);
-
-    for(i = 0; i < 5; i++)
+    while(str[i] != '\0')
     {
-        if(*(p + i) == key)
-            flag = 1;
+        if(!(str[i] >= 'A' && str[i] <= 'Z') &&
+           !(str[i] >= 'a' && str[i] <= 'z') &&
+           !(str[i] >= '0' && str[i] <= '9') &&
+           str[i] != ' ')
+        {
+            special++;
+        }
+
+        i++;
     }
 
-    if(flag)
-        printf("Found");
-    else
-        printf("Not Found");
+    printf("Special Characters = %d", special);
 }
 
 /*
 OUTPUT:
-Found
+Enter String: HELLO@123#
+Special Characters = 2
 */

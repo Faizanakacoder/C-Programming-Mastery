@@ -1,32 +1,31 @@
 /*
 ===========================================
 Question 01:
-Write a C program to display array using pointer.
+Write a C program to reverse a string.
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
 void main()
 {
-    int arr[5], i;
-    int *p;
+    char str[100];
+    int i, length;
 
-    p = arr;
+    printf("Enter String: ");
+    gets(str);
 
-    printf("Enter 5 elements:\n");
+    length = strlen(str);
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
-
-    printf("Array Elements:\n");
-
-    for(i = 0; i < 5; i++)
-        printf("%d ", *(p + i));
+    for(i = length-1; i >= 0; i--)
+    {
+        printf("%c", str[i]);
+    }
 }
 
 /*
 OUTPUT:
-1 2 3 4 5
-1 2 3 4 5
+Enter String: HELLO
+OLLEH
 */

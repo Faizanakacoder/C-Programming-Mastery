@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 06:
-Write a C program to search element using pointer.
+Write a C program to check palindrome string
+without using library function.
 ===========================================
 */
 
@@ -9,27 +10,34 @@ Write a C program to search element using pointer.
 
 void main()
 {
-    int arr[5], i, key, flag = 0;
-    int *p = arr;
+    char str[100];
+    int i, length = 0, flag = 1;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    scanf("%d", &key);
-
-    for(i = 0; i < 5; i++)
+    while(str[length] != '\0')
     {
-        if(*(p + i) == key)
-            flag = 1;
+        length++;
     }
 
-    if(flag)
-        printf("Found");
+    for(i = 0; i < length/2; i++)
+    {
+        if(str[i] != str[length-1-i])
+        {
+            flag = 0;
+            break;
+        }
+    }
+
+    if(flag == 1)
+        printf("Palindrome String");
     else
-        printf("Not Found");
+        printf("Not Palindrome");
 }
 
 /*
 OUTPUT:
-Found
+Enter String: MADAM
+Palindrome String
 */

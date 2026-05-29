@@ -1,7 +1,7 @@
 /*
 ===========================================
 Question 08:
-Write a C program to count even and odd using pointer.
+Write a C program to replace character in string.
 ===========================================
 */
 
@@ -9,25 +9,37 @@ Write a C program to count even and odd using pointer.
 
 void main()
 {
-    int arr[5], i, even = 0, odd = 0;
-    int *p = arr;
+    char str[100], oldch, newch;
+    int i = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
+    printf("Enter Old Character: ");
+    scanf("%c", &oldch);
+
+    getchar();
+
+    printf("Enter New Character: ");
+    scanf("%c", &newch);
+
+    while(str[i] != '\0')
     {
-        if(*(p + i) % 2 == 0)
-            even++;
-        else
-            odd++;
+        if(str[i] == oldch)
+        {
+            str[i] = newch;
+        }
+
+        i++;
     }
 
-    printf("Even = %d\nOdd = %d", even, odd);
+    printf("Modified String = %s", str);
 }
 
 /*
 OUTPUT:
-Even = 3
-Odd = 2
+Enter String: HELLO
+Enter Old Character: L
+Enter New Character: X
+Modified String = HEXXO
 */

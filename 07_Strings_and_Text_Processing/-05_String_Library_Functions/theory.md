@@ -1,76 +1,177 @@
-# 📘 Array with Pointers - Theory
+# 📄 theory.md
+
+# 📘 String Library Functions - Theory
 
 ---
 
-## 📌 What is Array with Pointer?
+# 📌 What are String Library Functions?
 
-An array name acts as a pointer to the first element.
+String library functions are predefined functions available in:
+
+<string.h>
+
+These functions help perform common string operations easily.
+
+---
+
+# 📌 Why Use Library Functions?
+
+Without library functions:
+
+* programs become lengthy
+* logic becomes repetitive
+* code readability decreases
+
+Library functions:
+✅ reduce coding effort
+✅ improve readability
+✅ save development time
+
+---
+
+# 📌 strlen()
+
+Used to find:
+
+* string length
 
 Example:
-int arr[5];
-arr == &arr[0]
+
+strlen("HELLO")
+
+Output:
+5
 
 ---
 
-## 🧠 Pointer Arithmetic
+# 📌 strcpy()
 
-If:
-p = arr;
+Used to:
 
-Then:
-p + 1 → next element
-p + 2 → third element
+* copy one string into another
 
----
+Example:
 
-## ⚙️ Memory Concept
-
-arr[0] → *p  
-arr[1] → *(p+1)  
-arr[2] → *(p+2)
+strcpy(str2, str1);
 
 ---
 
-## 📊 How It Works
+# 📌 strcat()
 
-- Array stored in continuous memory
-- Pointer moves step-by-step
-- Each step depends on data type size
+Used to:
 
----
+* join two strings
 
-## 🌍 Real Life Example
+Example:
 
-- Row of seats in cinema
-- Pointer = moving seat number
-- Array = full row
+strcat(str1, str2);
 
 ---
 
-## 📌 Advantages
+# 📌 strcmp()
 
-✔ Fast access  
-✔ Efficient memory usage  
-✔ Core of data structures  
+Used to:
 
----
+* compare strings
 
-## ❌ Disadvantages
+Returns:
 
-❌ Easy to misuse pointers  
-❌ Can cause segmentation faults  
+* 0 if equal
+* non-zero if not equal
 
 ---
 
-## 🎯 Interview Questions
+# 📌 strrev()
 
-- Difference between array and pointer?
-- What is pointer arithmetic?
-- Why array name is pointer?
-- Can pointer modify array?
+Used to:
+
+* reverse string
 
 ---
 
-## 🚀 Conclusion
+# 📌 strupr()
 
-Array with pointers is **foundation of memory-level programming in C**.
+Used to:
+
+* convert lowercase to uppercase
+
+---
+
+# 📌 strlwr()
+
+Used to:
+
+* convert uppercase to lowercase
+
+---
+
+# 📌 strchr()
+
+Used to:
+
+* search character in string
+
+---
+
+# 📌 strstr()
+
+Used to:
+
+* search substring
+
+---
+
+# 🌍 Real Life Analogy
+
+Think of library functions like:
+ready-made tools.
+
+Instead of building tools manually,
+we directly use them.
+
+---
+
+# 📌 Advantages
+
+✅ Faster coding
+✅ Reduced complexity
+✅ Cleaner programs
+✅ Professional coding style
+
+---
+
+# ❌ Disadvantages
+
+❌ Less logic-building practice
+❌ Some functions compiler-dependent
+
+---
+
+# 🧪 Dry Run Example
+
+Input:
+HELLO
+
+strlen("HELLO")
+
+Traversal:
+H → E → L → L → O
+
+Count:
+5
+
+---
+
+# 🎯 Viva Questions
+
+1. What is `<string.h>`?
+2. What does strlen() do?
+3. Difference between strcpy() and strcat()?
+4. Why use strcmp() instead of ==?
+5. What is substring?
+
+---
+
+# 🚀 Conclusion
+
+String library functions simplify string handling and are essential for professional C programming.
