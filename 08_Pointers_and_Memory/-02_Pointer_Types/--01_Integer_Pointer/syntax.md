@@ -1,130 +1,112 @@
-# 📘 Manual String Implementations - Syntax
+# 📘 Integer Pointer - Syntax
 
 ---
 
-# 📌 Manual String Length
+# 📌 Integer Pointer Declaration
 
-while(str[i] != '\0')
-{
-count++;
-i++;
-}
+int *ptr;
 
 ---
 
-# 📌 Manual String Copy
+# 📌 Integer Pointer Initialization
 
-while(source[i] != '\0')
-{
-destination[i] = source[i];
-i++;
-}
+int num = 10;
 
-destination[i] = '\0';
+int *ptr = #
 
 ---
 
-# 📌 Manual String Concatenation
+# 📌 Access Value using Pointer
 
-while(str1[i] != '\0')
-{
-i++;
-}
-
-while(str2[j] != '\0')
-{
-str1[i] = str2[j];
-
-```
-i++;
-j++;
-```
-
-}
-
-str1[i] = '\0';
+printf("%d", *ptr);
 
 ---
 
-# 📌 Manual String Comparison
+# 📌 Display Address
 
-while(str1[i] == str2[i])
-{
-i++;
-}
+printf("%u", ptr);
 
 ---
 
-# 📌 Manual Reverse
+# 📌 Modify Value using Pointer
 
-for(i = length - 1; i >= 0; i--)
-{
-printf("%c", str[i]);
-}
+*ptr = 50;
 
 ---
 
-# 📌 Palindrome Check
+# 📌 Integer Pointer Arithmetic
 
-if(str[i] != str[j])
-{
-flag = 0;
-}
+ptr++;
 
----
-
-# 📌 Uppercase Conversion
-
-if(str[i] >= 'a' && str[i] <= 'z')
-{
-str[i] = str[i] - 32;
-}
+ptr--;
 
 ---
 
-# 📌 Lowercase Conversion
+# 📌 Integer Pointer with Array
 
-if(str[i] >= 'A' && str[i] <= 'Z')
+int arr[3] = {1,2,3};
+
+int *p = arr;
+
+---
+
+# 📌 Function with Integer Pointer
+
+void display(int *p)
 {
-str[i] = str[i] + 32;
+printf("%d", *p);
 }
 
 ---
 
 # 📌 Important Rules
 
-✅ Strings end with '\0'
-✅ Use correct indexing
-✅ Stop traversal properly
-✅ Handle memory carefully
+✅ Use correct datatype
+✅ Initialize pointer properly
+✅ Use dereference carefully
 
 ---
 
 # ⚠️ Common Mistakes
 
-❌ Missing null character
-❌ Infinite loops
-❌ Wrong array indexing
-❌ Incorrect loop condition
+❌ Missing `&` operator
+❌ Missing `*` operator
+❌ Invalid memory access
 
 ---
 
-# 🚀 Quick Revision
+# 📌 Quick Revision Table
 
-| Operation | Logic              |
-| --------- | ------------------ |
-| strlen    | Count characters   |
-| strcpy    | Copy characters    |
-| strcat    | Append strings     |
-| strcmp    | Compare characters |
+| Syntax   | Meaning          |
+| -------- | ---------------- |
+| int *ptr | Integer pointer  |
+| &num     | Address of num   |
+| *ptr     | Value at address |
+
+---
+
+# 📌 Example Syntax
+
+#include<stdio.h>
+
+void main()
+{
+int x = 10;
+
+```
+int *p = &x;
+
+printf("%d", *p);
+```
+
+}
 
 ---
 
 # 🎯 Summary
 
-Manual implementations improve:
+Integer Pointer syntax helps:
 
-* logic
-* memory understanding
-* placement preparation
-* professional coding skills
+* memory access
+* efficient programming
+* advanced pointer handling

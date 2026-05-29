@@ -1,8 +1,8 @@
 /*
 ===========================================
 Question 09:
-Write a C program to convert string
-into lowercase manually.
+Write a C program to swap
+two numbers using integer pointers.
 ===========================================
 */
 
@@ -10,27 +10,28 @@ into lowercase manually.
 
 void main()
 {
-    char str[100];
-    int i = 0;
+    // Variable declaration
+    int a = 10, b = 20, temp;
 
-    printf("Enter String: ");
-    gets(str);
+    // Pointer declaration
+    int *p1 = &a;
+    int *p2 = &b;
 
-    while(str[i] != '\0')
-    {
-        if(str[i] >= 'A' && str[i] <= 'Z')
-        {
-            str[i] = str[i] + 32;
-        }
+    // Swapping logic
+    temp = *p1;
 
-        i++;
-    }
+    *p1 = *p2;
 
-    printf("Lowercase String = %s", str);
+    *p2 = temp;
+
+    // Display swapped values
+    printf("A = %d\n", a);
+
+    printf("B = %d", b);
 }
 
 /*
 OUTPUT:
-Enter String: HELLO
-Lowercase String = hello
+A = 20
+B = 10
 */

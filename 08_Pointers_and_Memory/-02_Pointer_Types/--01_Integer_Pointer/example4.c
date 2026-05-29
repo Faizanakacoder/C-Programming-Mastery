@@ -1,8 +1,8 @@
 /*
 ===========================================
 Question 04:
-Write a C program to compare two
-strings manually without strcmp().
+Write a C program to display
+address and value using pointer.
 ===========================================
 */
 
@@ -10,35 +10,21 @@ strings manually without strcmp().
 
 void main()
 {
-    char str1[100], str2[100];
-    int i = 0, flag = 1;
+    // Integer variable
+    int x = 25;
 
-    printf("Enter First String: ");
-    gets(str1);
+    // Pointer declaration
+    int *p = &x;
 
-    printf("Enter Second String: ");
-    gets(str2);
+    // Display address
+    printf("Address = %u\n", p);
 
-    while(str1[i] != '\0' || str2[i] != '\0')
-    {
-        if(str1[i] != str2[i])
-        {
-            flag = 0;
-            break;
-        }
-
-        i++;
-    }
-
-    if(flag == 1)
-        printf("Strings are Equal");
-    else
-        printf("Strings are Not Equal");
+    // Display value
+    printf("Value = %d", *p);
 }
 
 /*
 OUTPUT:
-Enter First String: HELLO
-Enter Second String: HELLO
-Strings are Equal
+Address = 6422292
+Value = 25
 */
