@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 10:
-Write a C program to demonstrate array addresses using pointer.
+Write a C program demonstrating pointer
+arithmetic on strings.
 ===========================================
 */
 
@@ -9,17 +10,25 @@ Write a C program to demonstrate array addresses using pointer.
 
 void main()
 {
-    int arr[5], i;
-    int *p = arr;
+    char str[] = "HELLO";
+    char *ptr;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    ptr = str;
 
-    for(i = 0; i < 5; i++)
-        printf("arr[%d] Address = %u\n", i, (p + i));
+    printf("%c\n", *ptr);
+
+    ptr++;
+
+    printf("%c\n", *ptr);
+
+    ptr++;
+
+    printf("%c", *ptr);
 }
 
 /*
 OUTPUT:
-Addresses of array elements
+H
+E
+L
 */

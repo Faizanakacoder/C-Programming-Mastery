@@ -1,30 +1,48 @@
 /*
 ===========================================
 Question 04:
-Write a C program to find min using pointer.
+Write a C program to search a name
+in array of strings.
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
 void main()
 {
-    int arr[5], i, min;
-    int *p = arr;
+    char names[5][20] =
+    {
+        "RAM",
+        "AMAN",
+        "SOHAN",
+        "VIKAS",
+        "ROHAN"
+    };
+
+    char search[20];
+    int i, flag = 0;
+
+    printf("Enter Name to Search: ");
+    gets(search);
 
     for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    {
+        if(strcmp(names[i], search) == 0)
+        {
+            flag = 1;
+            break;
+        }
+    }
 
-    min = *p;
-
-    for(i = 1; i < 5; i++)
-        if(*(p + i) < min)
-            min = *(p + i);
-
-    printf("Min = %d", min);
+    if(flag == 1)
+        printf("Name Found");
+    else
+        printf("Name Not Found");
 }
 
 /*
 OUTPUT:
-Min = 5
+Enter Name to Search: AMAN
+Name Found
 */

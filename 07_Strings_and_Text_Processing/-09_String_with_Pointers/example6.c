@@ -1,35 +1,40 @@
 /*
 ===========================================
 Question 06:
-Write a C program to search element using pointer.
+Write a C program to reverse string
+using pointers.
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
 void main()
 {
-    int arr[5], i, key, flag = 0;
-    int *p = arr;
+    char str[100];
+    char *start, *end, temp;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    scanf("%d", &key);
+    start = str;
+    end = str + strlen(str) - 1;
 
-    for(i = 0; i < 5; i++)
+    while(start < end)
     {
-        if(*(p + i) == key)
-            flag = 1;
+        temp = *start;
+        *start = *end;
+        *end = temp;
+
+        start++;
+        end--;
     }
 
-    if(flag)
-        printf("Found");
-    else
-        printf("Not Found");
+    printf("Reversed String = %s", str);
 }
 
 /*
 OUTPUT:
-Found
+Enter String: HELLO
+Reversed String = OLLEH
 */

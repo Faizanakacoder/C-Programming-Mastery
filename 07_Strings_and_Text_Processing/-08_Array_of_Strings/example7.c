@@ -1,38 +1,46 @@
 /*
 ===========================================
 Question 07:
-Write a C program to sort array using pointer.
+Write a C program to find shortest string
+from array of strings.
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
 void main()
 {
-    int arr[5], i, j, temp;
-    int *p = arr;
+    char names[3][20];
+    int i, min, index = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter 3 Strings:\n");
 
-    for(i = 0; i < 5; i++)
+    for(i = 0; i < 3; i++)
     {
-        for(j = i + 1; j < 5; j++)
+        gets(names[i]);
+    }
+
+    min = strlen(names[0]);
+
+    for(i = 1; i < 3; i++)
+    {
+        if(strlen(names[i]) < min)
         {
-            if(*(p + i) > *(p + j))
-            {
-                temp = *(p + i);
-                *(p + i) = *(p + j);
-                *(p + j) = temp;
-            }
+            min = strlen(names[i]);
+            index = i;
         }
     }
 
-    for(i = 0; i < 5; i++)
-        printf("%d ", *(p + i));
+    printf("Shortest String = %s", names[index]);
 }
 
 /*
 OUTPUT:
-1 2 3 4 5
+Enter 3 Strings:
+PROGRAMMING
+RAM
+COMPUTER
+
+Shortest String = RAM
 */

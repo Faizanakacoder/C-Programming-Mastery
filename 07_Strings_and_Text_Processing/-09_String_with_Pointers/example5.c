@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 05:
-Write a C program to reverse array using pointer.
+Write a C program to compare strings
+using pointers.
 ===========================================
 */
 
@@ -9,19 +10,40 @@ Write a C program to reverse array using pointer.
 
 void main()
 {
-    int arr[5], i;
-    int *p = arr;
+    char str1[100], str2[100];
+    char *ptr1, *ptr2;
+    int flag = 1;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter First String: ");
+    gets(str1);
 
-    printf("Reverse:\n");
+    printf("Enter Second String: ");
+    gets(str2);
 
-    for(i = 4; i >= 0; i--)
-        printf("%d ", *(p + i));
+    ptr1 = str1;
+    ptr2 = str2;
+
+    while(*ptr1 != '\0' || *ptr2 != '\0')
+    {
+        if(*ptr1 != *ptr2)
+        {
+            flag = 0;
+            break;
+        }
+
+        ptr1++;
+        ptr2++;
+    }
+
+    if(flag == 1)
+        printf("Strings are Equal");
+    else
+        printf("Strings are Not Equal");
 }
 
 /*
 OUTPUT:
-5 4 3 2 1
+Enter First String: HELLO
+Enter Second String: HELLO
+Strings are Equal
 */

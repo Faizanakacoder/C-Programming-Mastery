@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 03:
-Write a C program to find max using pointer.
+Write a C program to count string length
+using pointer.
 ===========================================
 */
 
@@ -9,22 +10,26 @@ Write a C program to find max using pointer.
 
 void main()
 {
-    int arr[5], i, max;
-    int *p = arr;
+    char str[100];
+    char *ptr;
+    int count = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    max = *p;
+    ptr = str;
 
-    for(i = 1; i < 5; i++)
-        if(*(p + i) > max)
-            max = *(p + i);
+    while(*ptr != '\0')
+    {
+        count++;
+        ptr++;
+    }
 
-    printf("Max = %d", max);
+    printf("Length = %d", count);
 }
 
 /*
 OUTPUT:
-Max = 50
+Enter String: PROGRAM
+Length = 7
 */

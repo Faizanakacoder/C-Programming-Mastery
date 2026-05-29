@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 10:
-Write a C program to demonstrate array addresses using pointer.
+Write a C program to count total strings
+stored in array of strings.
 ===========================================
 */
 
@@ -9,17 +10,23 @@ Write a C program to demonstrate array addresses using pointer.
 
 void main()
 {
-    int arr[5], i;
-    int *p = arr;
+    char names[5][20] =
+    {
+        "RAM",
+        "AMAN",
+        "SOHAN",
+        "ROHAN",
+        "VIKAS"
+    };
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    int total;
 
-    for(i = 0; i < 5; i++)
-        printf("arr[%d] Address = %u\n", i, (p + i));
+    total = sizeof(names) / sizeof(names[0]);
+
+    printf("Total Strings = %d", total);
 }
 
 /*
 OUTPUT:
-Addresses of array elements
+Total Strings = 5
 */

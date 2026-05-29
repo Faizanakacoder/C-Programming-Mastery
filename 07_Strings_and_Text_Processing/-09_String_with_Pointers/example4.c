@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 04:
-Write a C program to find min using pointer.
+Write a C program to copy string
+using pointers.
 ===========================================
 */
 
@@ -9,22 +10,30 @@ Write a C program to find min using pointer.
 
 void main()
 {
-    int arr[5], i, min;
-    int *p = arr;
+    char str1[100], str2[100];
+    char *source, *destination;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str1);
 
-    min = *p;
+    source = str1;
+    destination = str2;
 
-    for(i = 1; i < 5; i++)
-        if(*(p + i) < min)
-            min = *(p + i);
+    while(*source != '\0')
+    {
+        *destination = *source;
 
-    printf("Min = %d", min);
+        source++;
+        destination++;
+    }
+
+    *destination = '\0';
+
+    printf("Copied String = %s", str2);
 }
 
 /*
 OUTPUT:
-Min = 5
+Enter String: HELLO
+Copied String = HELLO
 */

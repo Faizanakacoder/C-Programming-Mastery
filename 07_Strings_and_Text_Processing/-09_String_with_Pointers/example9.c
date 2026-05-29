@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 09:
-Write a C program for pointer traversal of array.
+Write a C program to print each character
+using pointers.
 ===========================================
 */
 
@@ -9,17 +10,28 @@ Write a C program for pointer traversal of array.
 
 void main()
 {
-    int arr[5], i;
-    int *p = arr;
+    char str[100];
+    char *ptr;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
-        printf("Address: %u Value: %d\n", (p + i), *(p + i));
+    ptr = str;
+
+    while(*ptr != '\0')
+    {
+        printf("\nCharacter = %c", *ptr);
+        ptr++;
+    }
 }
 
 /*
 OUTPUT:
-Address: ... Value: 10
+Enter String: WORLD
+
+Character = W
+Character = O
+Character = R
+Character = L
+Character = D
 */

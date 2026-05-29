@@ -1,46 +1,95 @@
-# 📘 Array with Pointers - Syntax
+# 📄 syntax.md
+
+# 📘 Array of Strings - Syntax
 
 ---
 
-## 📌 Pointer Declaration
+# 📌 Declaration
 
-int *p;
-
----
-
-## 📌 Assign Array Address
-
-p = arr;
-
-OR
-
-p = &arr[0];
+char names[5][20];
 
 ---
 
-## 📌 Access Elements
+# 📌 Initialization
 
-*(p + i)
-
----
-
-## 📌 Loop Traversal
-
-for(i = 0; i < size; i++)
+char names[3][20] =
 {
-    printf("%d", *(p + i));
+"RAM",
+"AMAN",
+"SOHAN"
+};
+
+---
+
+# 📌 Input Multiple Strings
+
+for(i = 0; i < n; i++)
+{
+gets(names[i]);
 }
 
 ---
 
-## 📌 Key Rules
+# 📌 Display Multiple Strings
 
-- Array name is pointer
-- Pointer moves in memory blocks
-- Must match data type size
+for(i = 0; i < n; i++)
+{
+puts(names[i]);
+}
 
 ---
 
-## 🚀 Summary
+# 📌 Compare Strings
 
-Pointer + array = **direct memory access system**
+strcmp(names[i], names[j]);
+
+---
+
+# 📌 Copy Strings
+
+strcpy(str1, str2);
+
+---
+
+# 📌 Sort Strings
+
+if(strcmp(names[i], names[j]) > 0)
+
+---
+
+# 📌 Important Rules
+
+✅ Use 2D character arrays
+✅ Each row stores one string
+✅ Use proper dimensions
+✅ Include `<string.h>` for comparison
+
+---
+
+# ⚠️ Common Mistakes
+
+❌ Wrong indexing
+❌ Small array size
+❌ Missing '\0'
+❌ Traversal mistakes
+
+---
+
+# 🚀 Quick Revision
+
+| Operation   | Syntax          |
+| ----------- | --------------- |
+| Declaration | char str[5][20] |
+| Input       | gets(str[i])    |
+| Output      | puts(str[i])    |
+| Compare     | strcmp()        |
+
+---
+
+# 🎯 Summary
+
+Array of Strings is used to:
+
+* store multiple strings
+* process textual records
+* manage text collections

@@ -1,35 +1,44 @@
 /*
 ===========================================
 Question 06:
-Write a C program to search element using pointer.
+Write a C program to find longest string
+from array of strings.
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
 void main()
 {
-    int arr[5], i, key, flag = 0;
-    int *p = arr;
+    char names[3][20];
+    int i, max = 0, index = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter 3 Strings:\n");
 
-    scanf("%d", &key);
-
-    for(i = 0; i < 5; i++)
+    for(i = 0; i < 3; i++)
     {
-        if(*(p + i) == key)
-            flag = 1;
+        gets(names[i]);
     }
 
-    if(flag)
-        printf("Found");
-    else
-        printf("Not Found");
+    for(i = 0; i < 3; i++)
+    {
+        if(strlen(names[i]) > max)
+        {
+            max = strlen(names[i]);
+            index = i;
+        }
+    }
+
+    printf("Longest String = %s", names[index]);
 }
 
 /*
 OUTPUT:
-Found
+Enter 3 Strings:
+RAM
+PROGRAMMING
+AMAN
+
+Longest String = PROGRAMMING
 */

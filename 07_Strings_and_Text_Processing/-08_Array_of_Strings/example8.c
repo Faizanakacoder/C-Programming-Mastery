@@ -1,33 +1,47 @@
 /*
 ===========================================
 Question 08:
-Write a C program to count even and odd using pointer.
+Write a C program to copy array of strings.
 ===========================================
 */
 
 #include<stdio.h>
+#include<string.h>
 
 void main()
 {
-    int arr[5], i, even = 0, odd = 0;
-    int *p = arr;
+    char str1[3][20], str2[3][20];
+    int i;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter 3 Strings:\n");
 
-    for(i = 0; i < 5; i++)
+    for(i = 0; i < 3; i++)
     {
-        if(*(p + i) % 2 == 0)
-            even++;
-        else
-            odd++;
+        gets(str1[i]);
     }
 
-    printf("Even = %d\nOdd = %d", even, odd);
+    for(i = 0; i < 3; i++)
+    {
+        strcpy(str2[i], str1[i]);
+    }
+
+    printf("\nCopied Strings:\n");
+
+    for(i = 0; i < 3; i++)
+    {
+        puts(str2[i]);
+    }
 }
 
 /*
 OUTPUT:
-Even = 3
-Odd = 2
+Enter 3 Strings:
+RAM
+AMAN
+SOHAN
+
+Copied Strings:
+RAM
+AMAN
+SOHAN
 */

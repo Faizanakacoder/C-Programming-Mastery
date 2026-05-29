@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 02:
-Write a C program to find sum using pointer.
+Write a C program to input multiple names
+using array of strings.
 ===========================================
 */
 
@@ -9,21 +10,31 @@ Write a C program to find sum using pointer.
 
 void main()
 {
-    int arr[5], i, sum = 0;
-    int *p = arr;
+    char names[3][20];
+    int i;
 
-    printf("Enter 5 elements:\n");
+    for(i = 0; i < 3; i++)
+    {
+        printf("Enter Name: ");
+        gets(names[i]);
+    }
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("\nStored Names:\n");
 
-    for(i = 0; i < 5; i++)
-        sum += *(p + i);
-
-    printf("Sum = %d", sum);
+    for(i = 0; i < 3; i++)
+    {
+        puts(names[i]);
+    }
 }
 
 /*
 OUTPUT:
-Sum = 15
+Enter Name: RAM
+Enter Name: AMAN
+Enter Name: SOHAN
+
+Stored Names:
+RAM
+AMAN
+SOHAN
 */

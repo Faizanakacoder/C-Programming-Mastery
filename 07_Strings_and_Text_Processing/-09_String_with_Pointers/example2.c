@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 02:
-Write a C program to find sum using pointer.
+Write a C program to traverse string
+using pointer.
 ===========================================
 */
 
@@ -9,21 +10,23 @@ Write a C program to find sum using pointer.
 
 void main()
 {
-    int arr[5], i, sum = 0;
-    int *p = arr;
+    char str[100];
+    char *ptr;
 
-    printf("Enter 5 elements:\n");
+    printf("Enter String: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    ptr = str;
 
-    for(i = 0; i < 5; i++)
-        sum += *(p + i);
-
-    printf("Sum = %d", sum);
+    while(*ptr != '\0')
+    {
+        printf("%c ", *ptr);
+        ptr++;
+    }
 }
 
 /*
 OUTPUT:
-Sum = 15
+Enter String: HELLO
+H E L L O
 */

@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 08:
-Write a C program to count even and odd using pointer.
+Write a C program to count vowels
+using pointers.
 ===========================================
 */
 
@@ -9,25 +10,33 @@ Write a C program to count even and odd using pointer.
 
 void main()
 {
-    int arr[5], i, even = 0, odd = 0;
-    int *p = arr;
+    char str[100];
+    char *ptr;
+    int vowels = 0;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
+    ptr = str;
+
+    while(*ptr != '\0')
     {
-        if(*(p + i) % 2 == 0)
-            even++;
-        else
-            odd++;
+        if(*ptr=='A'||*ptr=='E'||*ptr=='I'||
+           *ptr=='O'||*ptr=='U'||*ptr=='a'||
+           *ptr=='e'||*ptr=='i'||*ptr=='o'||
+           *ptr=='u')
+        {
+            vowels++;
+        }
+
+        ptr++;
     }
 
-    printf("Even = %d\nOdd = %d", even, odd);
+    printf("Total Vowels = %d", vowels);
 }
 
 /*
 OUTPUT:
-Even = 3
-Odd = 2
+Enter String: HELLO
+Total Vowels = 2
 */

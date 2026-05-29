@@ -1,46 +1,104 @@
-# 📘 Array with Pointers - Syntax
+# 📄 syntax.md
+
+# 📘 String with Pointers - Syntax
 
 ---
 
-## 📌 Pointer Declaration
+# 📌 Declare String Pointer
 
-int *p;
-
----
-
-## 📌 Assign Array Address
-
-p = arr;
-
-OR
-
-p = &arr[0];
+char *ptr;
 
 ---
 
-## 📌 Access Elements
+# 📌 Assign String to Pointer
 
-*(p + i)
+char *ptr = "HELLO";
 
 ---
 
-## 📌 Loop Traversal
+# 📌 Traverse String using Pointer
 
-for(i = 0; i < size; i++)
+while(*ptr != '\0')
 {
-    printf("%d", *(p + i));
+printf("%c", *ptr);
+ptr++;
 }
 
 ---
 
-## 📌 Key Rules
+# 📌 Pointer Arithmetic
 
-- Array name is pointer
-- Pointer moves in memory blocks
-- Must match data type size
+ptr++;
+
+ptr + 1;
 
 ---
 
-## 🚀 Summary
+# 📌 Copy String using Pointer
 
-Pointer + array = **direct memory access system**
+while(*source != '\0')
+{
+*destination = *source;
+
+```
+source++;
+destination++;
+```
+
+}
+
+*destination = '\0';
+
+---
+
+# 📌 Compare Strings using Pointer
+
+while(*str1 == *str2)
+{
+str1++;
+str2++;
+}
+
+---
+
+# 📌 Access Character
+
+printf("%c", *ptr);
+
+---
+
+# 📌 Important Rules
+
+✅ Strings end with '\0'
+✅ Increment pointers carefully
+✅ Use valid memory addresses
+✅ Stop traversal at '\0'
+
+---
+
+# ⚠️ Common Mistakes
+
+❌ Dereferencing NULL pointer
+❌ Infinite traversal
+❌ Missing '\0'
+❌ Invalid pointer arithmetic
+
+---
+
+# 🚀 Quick Revision
+
+| Syntax    | Meaning           |
+| --------- | ----------------- |
+| *ptr      | Current character |
+| ptr++     | Next character    |
+| char *ptr | String pointer    |
+
+---
+
+# 🎯 Summary
+
+Pointers allow:
+
+* direct memory access
+* efficient traversal
+* advanced string handling

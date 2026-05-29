@@ -1,7 +1,8 @@
 /*
 ===========================================
 Question 07:
-Write a C program to sort array using pointer.
+Write a C program to convert string into
+uppercase using pointers.
 ===========================================
 */
 
@@ -9,30 +10,29 @@ Write a C program to sort array using pointer.
 
 void main()
 {
-    int arr[5], i, j, temp;
-    int *p = arr;
+    char str[100];
+    char *ptr;
 
-    for(i = 0; i < 5; i++)
-        scanf("%d", p + i);
+    printf("Enter String: ");
+    gets(str);
 
-    for(i = 0; i < 5; i++)
+    ptr = str;
+
+    while(*ptr != '\0')
     {
-        for(j = i + 1; j < 5; j++)
+        if(*ptr >= 'a' && *ptr <= 'z')
         {
-            if(*(p + i) > *(p + j))
-            {
-                temp = *(p + i);
-                *(p + i) = *(p + j);
-                *(p + j) = temp;
-            }
+            *ptr = *ptr - 32;
         }
+
+        ptr++;
     }
 
-    for(i = 0; i < 5; i++)
-        printf("%d ", *(p + i));
+    printf("Uppercase String = %s", str);
 }
 
 /*
 OUTPUT:
-1 2 3 4 5
+Enter String: hello
+Uppercase String = HELLO
 */
